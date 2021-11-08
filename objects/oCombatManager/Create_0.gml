@@ -14,6 +14,7 @@ enum phase {
 	wait,
 	process,
 	checkFinish,
+	endTurn,
 	win,
 	lose
 }
@@ -25,5 +26,12 @@ processFinished = false;
 allowInput = false;
 
 global.selectedUnit = noone;
-global.units = ds_list_create();
+global.units = ds_list_create(); //list of all units
+global.targets = ds_list_create(); //potential units to attack
 global.selectedTargets = noone;
+
+global.targeting = false;
+
+
+baseUI = layer_get_id("BaseUI");
+targetUI = layer_get_id("TargetUI");

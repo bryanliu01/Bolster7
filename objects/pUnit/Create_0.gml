@@ -49,6 +49,7 @@ incomingDamage = 0;
 healthBarWidth = 128;
 healthBarHeight = sprite_get_height(sHealthBar);
 
+drawTarget = false;
 
 function DamageUnit(amount) {
 	

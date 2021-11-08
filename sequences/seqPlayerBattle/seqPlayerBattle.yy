@@ -8,12 +8,26 @@
   "volume": 1.0,
   "length": 200.0,
   "events": {
-    "Keyframes": [],
+    "Keyframes": [
+      {"id":"938d1834-116b-4748-b0f7-d824499e4847","Key":53.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+              "AttackSent",
+            ],"resourceVersion":"1.0","resourceType":"MessageEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MessageEventKeyframe>",},
+      {"id":"676aab01-c1bd-4e92-952b-3e854c29addb","Key":109.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+              "UnitHurt",
+            ],"resourceVersion":"1.0","resourceType":"MessageEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MessageEventKeyframe>",},
+    ],
     "resourceVersion": "1.0",
     "resourceType": "KeyframeStore<MessageEventKeyframe>",
   },
   "moments": {
-    "Keyframes": [],
+    "Keyframes": [
+      {"id":"1b5779e7-9145-40a9-961a-d5fd11eeae34","Key":29.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+              "CheckForHit",
+            ],"resourceVersion":"1.0","resourceType":"MomentsEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MomentsEventKeyframe>",},
+      {"id":"3cf5f034-e662-46b1-9aa8-20db440d8bad","Key":46.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+              "UnitAttack",
+            ],"resourceVersion":"1.0","resourceType":"MomentsEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MomentsEventKeyframe>",},
+    ],
     "resourceVersion": "1.0",
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
   },

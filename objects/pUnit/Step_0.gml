@@ -83,3 +83,7 @@ switch(state) {
 		}
 	break;
 }
+
+if ((global.targeting) && global.selectedUnit != id) {
+	
+}
