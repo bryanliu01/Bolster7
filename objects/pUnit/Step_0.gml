@@ -3,7 +3,7 @@
 switch(state) {
 	
 	case INTRO:
-		layer_sequence_headpos(unitSequence, battleArriveStart);
+
 		if (layer_sequence_get_headpos(unitSequence) > battleArriveEnd) {
 			layer_sequence_headpos(unitSequence, idleStart);
 			state = IDLE;
@@ -62,6 +62,7 @@ switch(state) {
 			else if (current[@ HEALTH] <= 0) {
 				layer_sequence_headpos(unitSequence, deathStart);
 				ds_list_delete(global.units, ds_list_find_index(global.units, id));
+				ds_list_delete(global.targets, ds_list_find_index(global.targets, id));
 				state = DEATH;
 				
 			}
@@ -84,6 +85,6 @@ switch(state) {
 	break;
 }
 
-if ((global.targeting) && global.selectedUnit != id) {
+if ((global.targeting) && global.attackingUnit != id) {
 	
 }

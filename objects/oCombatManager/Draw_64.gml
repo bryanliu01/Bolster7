@@ -1,7 +1,10 @@
-draw_text(80,0, "allow input:" + string(allowInput) + "selected unit: " + string(global.selectedUnit));
-
-
-
-for (var i = 0; i < ds_list_size(global.units); i++) {
-	draw_text(40,16+(i*16), string(global.units[|i]));
+//The combat manager will manage all enemy health GUI
+for (var i = 0; i < ds_list_size(global.targets); i++) {
+	var inst = global.targets[|i];
+	var _hp = inst.current[@ HEALTH]/inst.base[@ HEALTH];
+	
+	draw_sprite(sEnemyHealthGUI, 1, baseHealthBarX, baseHealthBarY  + i * healthBarHeight);
+	draw_sprite_stretched(sHealthBar, 0, healthBarOffSetX, healthBarOffSetY, _hp*healthBarWidth, healthBarHeight);
+	draw_sprite(sEnemyHealthGUI, 0, baseHealthBarX, baseHealthBarY  + i * healthBarHeight);
+	
 }

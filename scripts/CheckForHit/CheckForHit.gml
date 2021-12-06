@@ -2,7 +2,7 @@ function CheckForHit(){
 	
 	//Checks to see if selected unit will hit its target based on accuracy
 	var number = random(1);
-	var unit = global.selectedUnit;
+	var unit = global.attackingUnit;
 	if (number < unit.current[@ ACCURACY]) {
 		unit.attackWillHit = true;
 	}

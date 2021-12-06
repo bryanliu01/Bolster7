@@ -1,14 +1,20 @@
 //Toggle between the states of the battle
 switch (combatPhase) {
 	case phase.init:
-		layer_set_visible(targetUI, false);
-		instance_deactivate_layer(targetUI);
-		layer_set_visible(baseUI, false);
 		
 		for (var i = 0; i < instance_number(cSpawn); i++) {
 			var spawner = instance_find(cSpawn, i);
-			var unit = instance_create_depth(spawner.x, spawner.y, 0, oPlayerBattle);
-			ds_list_add(global.units, unit);
+			
+			//Spawn Player and Hologram for test
+			if (i = 0) {
+				var unit = instance_create_depth(spawner.x, spawner.y, 0, oPlayerBattle);
+				ds_list_add(global.units, unit);
+			}
+			
+			else {
+				var unit = instance_create_depth(spawner.x, spawner.y, 0, oHologramBattle);
+				ds_list_add(global.units, unit);
+			}
 		}
 		combatPhase = phase.realTimeTurn;
 	break;
@@ -28,16 +34,23 @@ switch (combatPhase) {
 			var inst = global.units[|i];
 			if (inst.turnFinished == false) {
 				inst.selected = true;
-				global.selectedUnit = inst;
+				global.attackingUnit = inst;
 				break;
 			}
 		}
 		
+		for (var i = 0; i < ds_list_size(global.units); i++) {
+			var _inst = global.units[|i];
+			
+			//debugging rn
+			if (_inst != global.attackingUnit && !ds_list_find_index(global.targets, _inst)) {
+			ds_list_add(global.targets, _inst);
+			}
+		}
+		
 		//If the game does not allow input, enable input
-		//Then execute the event 1, which will toggle the baseUI layer.
 		if (!allowInput) {
 			allowInput = true;
-			event_user(1);
 		}
 		
 		combatPhase = phase.wait;
@@ -46,16 +59,10 @@ switch (combatPhase) {
 	//Either we are attacking or enemy is attacking, we must wait***
 	case phase.wait:
 		if (selectedFinished == true) {	
-			global.selectedUnit.selected = false;
+			global.attackingUnit.selected = false;
 			unitsFinished++;
 			combatPhase = phase.process;
 			
-			//Toggle input
-			event_user(0);
-			layer_set_visible(targetUI, false);
-			instance_deactivate_layer(targetUI);
-			layer_set_visible(baseUI,false);
-			instance_deactivate_layer(baseUI);
 		}
 	break;
 	
@@ -85,15 +92,11 @@ switch (combatPhase) {
 		selectedFinished = false;
 		global.selectedTargets = noone;
 		
-		//clear the targets of the list after the turn ends
-		ds_list_clear(global.targets);
-		
 		combatPhase = phase.realTimeTurn;
 	break;
 	
 	case phase.win:
-	ds_list_destroy(global.units);
-	ds_list_destroy(global.targets);
+	
 	//Gain exp and money, check level ups, return to position in overworld
 	break;
 	

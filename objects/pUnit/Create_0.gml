@@ -8,10 +8,10 @@
 //Statistics
 #macro HEALTH 0
 #macro SKILLPOINTS 1
-#macro SPEED 1
-#macro ATTACKPOINTS 2
-#macro DEFENCEPOINTS 1
-#macro ACCURACY 1
+#macro SPEED 2
+#macro ATTACKPOINTS 3
+#macro DEFENCEPOINTS 4
+#macro ACCURACY 5
 
 //States
 #macro IDLE 0
@@ -24,13 +24,13 @@
 #macro INTRO 7
 
 
-state = IDLE;
+state = INTRO;
 
 base[HEALTH] = 10;
 base[SKILLPOINTS] = 1;
 base[SPEED] = 1;
 base[ATTACKPOINTS] = irandom_range(ATTACKPOINTS, ATTACKPOINTS + 2);
-base[DEFENCEPOINTS] = 1;
+base[DEFENCEPOINTS] = 0;
 base[ACCURACY] = 1;
 
 current[HEALTH] = base[@ HEALTH];

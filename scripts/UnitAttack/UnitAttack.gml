@@ -1,5 +1,5 @@
 function UnitAttack(){
-	var unit = global.selectedUnit;
+	var unit = global.attackingUnit;
 	if (unit.attackWillHit) {
 		
 		//If the selected unit's attack will hit,
