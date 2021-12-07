@@ -1,7 +1,7 @@
 event_inherited();
 
-base[HEALTH] = 50;
-base[SKILLPOINTS] = 1;
+base[HEALTH] = 100;
+base[SKILLPOINTS] = 20;
 base[SPEED] = 50;
 base[ATTACKPOINTS] = 5
 base[DEFENCEPOINTS] = 3;
@@ -57,7 +57,7 @@ energyBarPosX = (RESOLUTION_W - 360)/2;
 energyBarPosY = 260;
 instance_create_layer(energyBarPosX, energyBarPosY, "BaseUI", oEnergyBar);
 
-healthBarWidth = 124;
+healthBarWidth = 116;
 healthBarHeight = 10;
 
 //**HEALTH BAR**//
@@ -88,9 +88,17 @@ lineOffTime = 1 * room_speed;
 //**SKILL POINTS**//
 global.skillPoints = base[@ SKILLPOINTS];
 
-//**GUI NUMBERS**//
-healthTextPosX = baseHealthBarX + 30;
-healthTextPosY = baseHealthBarY - 5;
+//**SKILL BAR**//
+skillBarOffSetX = healthBarOffSetX + 2;
+skillBarOffSetY = healthBarOffSetY + 14;
+skillBarWidth = 110;
+skillBarHeight = 6;
 
-skillTextPosX = baseHealthBarX + 30;
-skillTextPosY = baseHealthBarY + 44;
+//**GUI NUMBERS**//
+healthTextPosX = baseHealthBarX + 160;
+healthTextPosY = baseHealthBarY + 11;
+stringWidth = 0;
+
+skillTextPosX = baseHealthBarX + 160;
+skillTextPosY = baseHealthBarY + 23;
+
