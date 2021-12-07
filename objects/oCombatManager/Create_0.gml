@@ -42,7 +42,7 @@ healthBarWidth = 104;
 healthBarHeight = 10;
 
 //Place base health bar GUI in this position
-baseHealthBarX = RESOLUTION_W - 8 - sprite_get_width(sEnemyHealthGUI);
+baseHealthBarX = RESOLUTIONW - 8 - sprite_get_width(sEnemyHealthGUI);
 baseHealthBarY = 19;
 
 //Place animated red health bar in offset position
@@ -58,3 +58,4 @@ whiteLinePosY = healthBarOffSetY;
 whiteLineHeight = healthBarHeight;
 whiteLineWidth = 1;
 endOfHealthBar = healthBarWidth + healthBarOffSetX;
+
