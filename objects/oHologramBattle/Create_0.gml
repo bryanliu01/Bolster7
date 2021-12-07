@@ -1,7 +1,7 @@
 event_inherited();
 
 
-base[HEALTH] = 8;
+base[HEALTH] = 22;
 base[SKILLPOINTS] = 1;
 base[SPEED] = 50;
 base[ATTACKPOINTS] = 3;
