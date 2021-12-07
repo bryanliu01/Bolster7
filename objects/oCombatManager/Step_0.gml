@@ -2,6 +2,9 @@
 switch (combatPhase) {
 	case phase.init:
 		
+		//**BACKGROUND**//
+		instance_create_layer(0, 0, layer_get_id("Room"), oBattleBackground);
+		
 		for (var i = 0; i < instance_number(cSpawn); i++) {
 			var spawner = instance_find(cSpawn, i);
 			
