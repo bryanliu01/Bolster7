@@ -27,19 +27,19 @@ var stringOffSet = string_width("0000");
 draw_set_color(c_white);
 
 //Health Text
-draw_text(healthTextPosX, healthTextPosY, "HP: ");
-draw_text(healthTextPosX + string_width("HP: "), healthTextPosY, string(current[@ HEALTH]));
-draw_text(healthTextPosX + string_width("HP: ") + stringOffSet, healthTextPosY, "|");
+draw_text(healthTextPosX, healthTextPosY, "HP ");
+draw_text(healthTextPosX + string_width("HP "), healthTextPosY, string(current[@ HEALTH]));
+draw_text(healthTextPosX + string_width("HP ") + stringOffSet, healthTextPosY, "|");
 
 draw_set_color(c_red);
-draw_text(healthTextPosX + string_width("HP: | ") + stringOffSet, healthTextPosY, string(base[@ HEALTH]));
+draw_text(healthTextPosX + string_width("HP | ") + stringOffSet, healthTextPosY, string(base[@ HEALTH]));
 draw_set_color(c_white);
 
 //Skill Text
-draw_text(skillTextPosX, skillTextPosY, "SP: ");
-draw_text(skillTextPosX + string_width("HP: "), skillTextPosY, string(global.skillPoints));
-draw_text(skillTextPosX + string_width("HP: ") + stringOffSet, skillTextPosY, "|");
+draw_text(skillTextPosX, skillTextPosY, "SP ");
+draw_text(skillTextPosX + string_width("HP "), skillTextPosY, string(global.skillPoints));
+draw_text(skillTextPosX + string_width("HP ") + stringOffSet, skillTextPosY, "|");
 
 draw_set_color(c_aqua);
-draw_text(skillTextPosX + string_width("HP: | ") + stringOffSet, skillTextPosY, string(base[@ SKILLPOINTS]));
+draw_text(skillTextPosX + string_width("HP | ") + stringOffSet, skillTextPosY, string(base[@ SKILLPOINTS]));
 draw_set_color(c_white);
