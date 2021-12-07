@@ -21,3 +21,4 @@ else {
 	whiteLinePosX = healthBarOffSetX;
 	waitTime = 0;
 }
+
