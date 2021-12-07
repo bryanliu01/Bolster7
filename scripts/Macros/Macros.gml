@@ -3,11 +3,11 @@
 #macro CARDINAL_DIR round(direction/90)
 
 // Can start in any room if we want to test something
-#macro ROOM_START rMSBegin
+#macro ROOM_START rMainMenu
 
 //Configure resolution
 #macro RESOLUTION_W 640
-#macro RESOLUTION_H 320
+#macro RESOLUTION_H 360
 
 #macro TRANSITION_SPEED 0.02
 #macro OUT 0
