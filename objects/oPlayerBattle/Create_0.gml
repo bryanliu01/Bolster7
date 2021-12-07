@@ -53,7 +53,7 @@ baseUI = layer_get_id("BaseUI");
 //**ENERGY BAR**//
 //Create Energy Bar
 energyBarWidth = 360;
-energyBarPosX = (RESOLUTION_W - 360)/2;
+energyBarPosX = (RESOLUTIONW - 360)/2;
 energyBarPosY = 260;
 instance_create_layer(energyBarPosX, energyBarPosY, "BaseUI", oEnergyBar);
 

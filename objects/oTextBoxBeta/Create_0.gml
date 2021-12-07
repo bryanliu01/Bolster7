@@ -12,11 +12,11 @@ PortHeight = sprite_get_height(Portrait[Page]);
 NameBoxWidth = sprite_get_width(NameBox);
 NameBoxHeight = sprite_get_height(NameBox);
 
-PortX = (RESOLUTION_W - BoxWidth - PortWidth) * 0.5;
-PortY = (RESOLUTION_H*0.98) - PortHeight;
+PortX = (RESOLUTIONW - BoxWidth - PortWidth) * 0.5;
+PortY = (RESOLUTIONH*0.98) - PortHeight;
 BoxX = PortX + PortWidth;
 BoxY = PortY;
-NameBoxX = RESOLUTION_W - PortX - 128;
+NameBoxX = RESOLUTIONW - PortX - 128;
 NameBoxY = BoxY - NameBoxHeight + 15;
 
 XBuffer = 12;

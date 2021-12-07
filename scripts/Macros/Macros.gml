@@ -6,8 +6,8 @@
 #macro ROOM_START rMainMenu
 
 //Configure resolution
-#macro RESOLUTION_W 640
-#macro RESOLUTION_H 360
+#macro RESOLUTIONW 640
+#macro RESOLUTIONH 360
 
 #macro TRANSITION_SPEED 0.02
 #macro OUT 0

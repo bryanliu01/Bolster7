@@ -5,8 +5,8 @@ Page = 0;
 BoxWidth = sprite_get_width(Box);
 BoxHeight = sprite_get_height(Box);
 
-BoxX = (RESOLUTION_W - BoxWidth)/2
-BoxY = RESOLUTION_H - BoxHeight + 1;
+BoxX = (RESOLUTIONW - BoxWidth)/2
+BoxY = RESOLUTIONH - BoxHeight + 1;
 
 XBuffer = 12;
 YBuffer = 18;
