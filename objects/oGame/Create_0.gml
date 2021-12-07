@@ -12,7 +12,7 @@ global.TargetDirection = 0;
 global.iCamera = instance_create_layer(0, 0, layer, oCamera);
 
 
-surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
+surface_resize(application_surface, RESOLUTIONW, RESOLUTIONH);
 
 //Use this to test out new rooms, keep in mind it will
 //bug out oRoomExit, so comment this out when playing normally
