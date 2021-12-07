@@ -1,3 +1,5 @@
 Credits List
 BPDots by backpacker
 Cloude by Roberto Mocci
+
+To add new font, go to C drive, Windows folder, fonts folder and add it there
