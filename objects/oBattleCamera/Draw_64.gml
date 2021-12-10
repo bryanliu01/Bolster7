@@ -1,0 +1,2 @@
+draw_text(10, 330, "View values: " + string(viewWidthHalf) + ", " + string(viewHeightHalf));
+draw_text(10, 320, "View positions: " + string(camera_get_view_x(cam)) + ", " + string(camera_get_view_y(cam)));
