@@ -8,7 +8,7 @@
 numLines = 12;
 
 //planeSpreadFactor
-planeSpreadFactor = 3;
+planeSpreadFactor = 2;
 
 //The distance needed for the top point to travel before resetting
 startTravelDistanceX = ((RESOLUTIONW * planeSpreadFactor) / numLines)
@@ -16,16 +16,34 @@ startTravelDistanceX = ((RESOLUTIONW * planeSpreadFactor) / numLines)
 //The distance needed for the bottom point to travel before resetting
 endTravelDistanceX = (RESOLUTIONW / numLines);
 
-
-startVerticalPos = 0;
-endVerticalPos = RESOLUTIONH - 20;
-
 //**LEADER LINE**//
 //All drawn lines will be dependent on these two lines
 //Center startX to screen by offsetting it
 startLeaderLineX = startTravelDistanceX - RESOLUTIONW/planeSpreadFactor;
 endLeaderLineX = endTravelDistanceX;
 
+startReverseLeaderLineX = 0;
+endReverseLeaderLineX = 0;
 
-//TODO
-//Create merging lights                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+//Reset position of lines after travelling distance
+startResetPosX = startLeaderLineX;
+endResetPosX = endLeaderLineX;
+
+//Y position is offset by centre of background
+startLeaderLineY = 0 - 127;
+endLeaderLineY = RESOLUTIONH/2 - 59;
+
+bottomStartLeaderY = RESOLUTIONH;
+bottomEndLeaderY = RESOLUTIONH - 229;
+
+//Create Y positions for horizontal lines using bottom side of horizon.
+//Top side of horizon is smaller and thus can be mimicked.
+horizontalTopY = endLeaderLineY + 9;
+horizontalMiddleY = bottomEndLeaderY - 7;
+
+baseSpacing = 8;
+
+
+//Edit how fast the lines move across the horizon
+timeScale = 2;
+time = timeScale;
