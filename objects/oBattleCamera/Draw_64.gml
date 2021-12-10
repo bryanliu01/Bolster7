@@ -1,2 +1,2 @@
-draw_text(10, 330, "View values: " + string(viewWidthHalf) + ", " + string(viewHeightHalf));
-draw_text(10, 320, "View positions: " + string(camera_get_view_x(cam)) + ", " + string(camera_get_view_y(cam)));
+draw_text(400, 50, "Camera Position: " + string(camera_get_view_x(cam)) +". " + string(camera_get_view_y(cam)));
+draw_text(400, 60, "Camera Size: " + string(camera_get_view_width(cam)) +". " + string(camera_get_view_height(cam)));
