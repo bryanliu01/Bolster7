@@ -1,8 +1,8 @@
 // Always call this script in each cutscene array element
 function CutsceneEndAction()
 {
-	Scene++;
-	if (Scene > array_length_1d(SceneInfo) - 1)
+	scene++;
+	if (scene > array_length_1d(sceneInfo) - 1)
 	{
 		instance_destroy();
 		exit;

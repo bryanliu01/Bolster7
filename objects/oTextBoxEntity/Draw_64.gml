@@ -1,3 +1,5 @@
+
+
 //Draw Box
 draw_sprite(Box, 0, BoxX, BoxY);
 draw_set_halign(fa_left); draw_set_valign(fa_top);

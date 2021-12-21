@@ -1,13 +1,10 @@
-/// @description Update Camera
-
-//Update destination
 if (instance_exists(Follow))
 {
 	XTo = Follow.x;
 	YTo = Follow.y;
 }
 
-//Update Object Position
+//Update Object Position with speed
 x += (XTo - x) / 5;
 y += (YTo - y) / 5;
 
@@ -22,3 +19,4 @@ y += random_range(-ShakeRemain, ShakeRemain);
 ShakeRemain = max(0, ShakeRemain - ((1/ShakeLength) * ShakeMagnitude));
 
 camera_set_view_pos(Cam, x - ViewWidthHalf, y - ViewHeightHalf);
+

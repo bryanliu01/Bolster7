@@ -1,0 +1,1 @@
+//draw_text(0, 300, "Normal camera in room");

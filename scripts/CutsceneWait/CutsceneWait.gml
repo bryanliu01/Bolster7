@@ -1,12 +1,12 @@
 ///@desc Allows Cutscene to wait that many seconds
 ///@arg seconds
-function CutsceneWait()
+function CutsceneWait(seconds)
 {
-	Timer++;
+	timer++;
 	
-	if (Timer >= argument0 * room_speed)
+	if (timer >= seconds * room_speed)
 	{
-		Timer = 0;
+		timer = 0;
 		CutsceneEndAction();
 	}
 		

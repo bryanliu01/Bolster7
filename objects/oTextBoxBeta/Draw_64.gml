@@ -1,3 +1,5 @@
+
+
 //Draw Box
 draw_sprite(Box, 0, BoxX, BoxY);
 

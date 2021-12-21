@@ -50,18 +50,12 @@ layer_sequence_headpos(unitSequence, battleArriveStart);
 
 baseUI = layer_get_id("BaseUI");
 
-//**ENERGY BAR**//
-//Create Energy Bar
-energyBarWidth = 360;
-energyBarPosX = (RESOLUTIONW - 360)/2;
-energyBarPosY = 260;
-instance_create_layer(energyBarPosX, energyBarPosY, "BaseUI", oEnergyBar);
-
-healthBarWidth = 116;
-healthBarHeight = 10;
 
 //**HEALTH BAR**//
 //Create Health Bar
+healthBarWidth = 116;
+healthBarHeight = 10;
+
 //Place base health bar GUI in this position
 baseHealthBarX = 8;
 baseHealthBarY = 8;
@@ -101,4 +95,24 @@ stringWidth = 0;
 
 skillTextPosX = baseHealthBarX + 160;
 skillTextPosY = baseHealthBarY + 23;
+
+//**ENERGY BAR**//
+//Create Energy Bar
+energyBarWidth = 120;
+energyBarHeight = sprite_get_height(sEnergyBar);
+
+currentEnergy = 0;
+
+global.energyPoints = 0;
+maxEnergyPoints = 3;
+global.energyFull = false;
+
+partitionWidth = energyBarWidth/maxEnergyPoints;
+
+//Duration interval of blinking energy bar in ms
+duration = 1200;
+
+
+energyBarPosX = 24 + baseHealthBarX;
+energyBarPosY = 44 + baseHealthBarX;
 

@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Objects/Managers.yy",
+    "name": "Cutscenes",
+    "path": "folders/Objects/Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTriggerCutscene",

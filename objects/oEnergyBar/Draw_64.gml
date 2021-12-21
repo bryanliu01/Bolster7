@@ -5,6 +5,7 @@ var yy = (y-cy)*DISPLAY_SCALE_Y;
 
 var _hp = currentEnergy/partitionWidth;
 
+draw_sprite(sEnergyBarFrame, 0, xx - 2, yy - 2);
 
 //Draw partial increasing energy bar
 draw_sprite_stretched(sEnergyBar, 0, xx, yy, _hp * partitionWidth + global.energyPoints * partitionWidth, energyBarHeight);
@@ -21,8 +22,12 @@ if (global.energyPoints > 0) {
 	}
 }
 
+//Draw borders
 for (var i = 0; i < maxEnergyPoints; i++) {
 	draw_sprite(sEnergyBarBorder, 0, xx + i * partitionWidth, yy);
 	
 }
+
+//Draw frame on top
+draw_sprite(sEnergyBarFrame, 1, xx - 3, yy - 2);
 

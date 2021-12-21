@@ -1,5 +1,6 @@
 //Listener of sequences
 if (event_data[? "event_type"] == "sequence event") {
+	
 	switch(event_data[? "message"]) {
 		
 		//This message should be at the end of the player's attack sequence
@@ -7,6 +8,7 @@ if (event_data[? "event_type"] == "sequence event") {
 		case "AttackSent":
 			allowInput = true;
 			global.pauseBattle = false;
+			global.menuLayer = 0;
 			break;
 	}
 }

@@ -8,6 +8,10 @@
 //win
 //lose
 
+idle = false;
+idleCount = 0;
+introFinished = false;
+
 enum phase {
 	init,
 	realTimeTurn,
@@ -58,4 +62,6 @@ whiteLinePosY = healthBarOffSetY;
 whiteLineHeight = healthBarHeight;
 whiteLineWidth = 1;
 endOfHealthBar = healthBarWidth + healthBarOffSetX;
+
+global.battleCamera = noone;
 

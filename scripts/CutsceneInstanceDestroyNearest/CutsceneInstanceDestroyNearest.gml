@@ -1,9 +1,9 @@
 ///@arg x
 ///@arg y
 ///@arg obj
-function CutsceneInstanceDestroyNearest()
+function CutsceneInstanceDestroyNearest(xPos, yPos, obj)
 {
-	var _Inst = instance_nearest(argument0, argument1, argument2);
+	var _Inst = instance_nearest(xPos, yPos, obj);
 	
 	with (_Inst)
 	{

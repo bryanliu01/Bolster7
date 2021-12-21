@@ -1,3 +1,17 @@
+//Check if all units are idle, if so, display GUI
+for (var i = 0; i < ds_list_size(global.units); i++) {
+	if (global.units[|i].state == IDLE) idleCount++;
+}
+if (idleCount == ds_list_size(global.units) && idleCount != 0) {
+	idle = true;
+	introFinished = true;
+}
+else {
+	idle = false;
+}
+idleCount = 0;
+
+
 //Toggle between the states of the battle
 switch (combatPhase) {
 	case phase.init:
@@ -19,6 +33,11 @@ switch (combatPhase) {
 				ds_list_add(global.units, unit);
 			}
 		}
+
+		//** CAMERA **//
+		if (!instance_exists(global.battleCamera)) 
+			global.battleCamera = instance_create_layer(0, 0, layer_get_id("Game"), oBattleCamera);
+		
 		combatPhase = phase.realTimeTurn;
 	break;
 	
@@ -54,9 +73,10 @@ switch (combatPhase) {
 		//If the game does not allow input, enable input
 		if (!allowInput) {
 			allowInput = true;
+			
 		}
-		
 		combatPhase = phase.wait;
+		
 	break;
 	
 	//Either we are attacking or enemy is attacking, we must wait***
@@ -69,6 +89,7 @@ switch (combatPhase) {
 		}
 	break;
 	
+	/*
 	case phase.process:
 		if (processFinished) {
 			combatPhase = phase.checkFinish;
@@ -89,22 +110,36 @@ switch (combatPhase) {
 	case phase.checkFinish:
 		processFinished = false;
 		combatPhase = phase.endTurn;
+		show_debug_message("check finish");
 	break;
 	
 	case phase.endTurn: 
 		selectedFinished = false;
 		global.selectedTargets = noone;
-		
-		combatPhase = phase.realTimeTurn;
+		if (instance_exists(oHologramBattle)) combatPhase = phase.realTimeTurn;
+		else combatPhase = phase.win;	
+		show_debug_message("end turn");
 	break;
 	
 	case phase.win:
-	
+		ds_list_destroy(global.units);
+		ds_list_destroy(global.targets);
+		idle = false;
+		
 	//Gain exp and money, check level ups, return to position in overworld
 	break;
 	
 	case phase.lose:
 	//Game Over Screen, Return to last checkpoint
 	break;
-	
+	*/
+}
+
+//WIN
+if (ds_list_size(global.targets) == 0) {
+	idle = false;
+}
+
+else if (!instance_exists(oPlayerBattle)) {
+	idle = false;
 }

@@ -1,7 +1,7 @@
-CurrentScene = SceneInfo[Scene];
+currentScene = sceneInfo[scene];
 
-var _Len = array_length_1d(CurrentScene) - 1;
+var len = array_length_1d(currentScene) - 1;
 
-//CurrentSceneArray = -1;
-CurrentSceneArray = array_create(_Len, 0);
-array_copy(CurrentSceneArray, 0, CurrentScene, 1, _Len);
+//currentSceneArray = -1;
+currentSceneArray = array_create(len, 0);
+array_copy(currentSceneArray, 0, currentScene, 1, len);

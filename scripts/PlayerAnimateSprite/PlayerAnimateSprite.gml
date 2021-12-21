@@ -1,18 +1,20 @@
 function PlayerAnimateSprite()
 {
-	var _CardinalDirection = round(direction/90);
-	var _TotalFrames = sprite_get_number(sprite_index) / 4;
-	image_index = LocalFrame + (_CardinalDirection * _TotalFrames);
-	LocalFrame += sprite_get_speed(sprite_index) / FRAME_RATE;
+	if (instance_exists(oPlayer)) {
+		var _CardinalDirection = round(direction/90);
+		var _TotalFrames = sprite_get_number(sprite_index) / 4;
+		image_index = localFrame + (_CardinalDirection * _TotalFrames);
+		localFrame += sprite_get_speed(sprite_index) / FRAME_RATE;
 	
-	//If animation would loop on next game step
-	if (LocalFrame >= _TotalFrames)
-		{
-			AnimationEnd = true;
-			LocalFrame -= _TotalFrames;
-		}
-	else
-		{
-			AnimationEnd = false;
-		}
+		//If animation would loop on next game step
+		if (localFrame >= _TotalFrames)
+			{
+				AnimationEnd = true;
+				localFrame -= _TotalFrames;
+			}
+		else
+			{
+				AnimationEnd = false;
+			}
+	}
 }

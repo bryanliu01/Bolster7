@@ -1,9 +1,9 @@
-SceneInfo = -1;
-Scene = 0;
+sceneInfo = -1;
+scene = 0;
 
-Timer = 0;
+timer = 0;
 
-XDest = -1;
-YDest = -1;
+xDest = -1;
+yDest = -1;
 
 //event_perform(ev_other, ev_user0);

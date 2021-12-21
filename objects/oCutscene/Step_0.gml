@@ -1,2 +1,2 @@
-CutsceneScriptExecute(CurrentScene[0], CurrentSceneArray);
-//CurrentScene, CurrentSceneArray
+CutsceneScriptExecute(currentScene[0], currentSceneArray);
+//currentScene, currentSceneArray

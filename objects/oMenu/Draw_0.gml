@@ -1,7 +1,8 @@
+draw_set_font(fGUI);
 var i = 0;
 repeat(buttons)
 {
-	draw_set_font(fText);
+	draw_set_font(fGUIBold);
 	draw_set_halign(fa_center);
 	draw_set_color(c_white);
 	

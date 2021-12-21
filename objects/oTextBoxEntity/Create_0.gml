@@ -18,7 +18,6 @@ Pause = false;
 
 TextColour = c_white;
 
-draw_set_font(fText);
 TextHeight = string_height("M");
 TextMaxWidth = BoxWidth - (2*XBuffer);
 

@@ -2,8 +2,8 @@ function PlayerStateFree()
 {
 		
 	//Movement After Callibration
-	HSpeed = lengthdir_x(InputMagnitude * SpeedWalk, InputDirection);
-	VSpeed = lengthdir_y(InputMagnitude * SpeedWalk, InputDirection);
+	HSpeed = lengthdir_x(inputMagnitude * SpeedWalk, inputDirection);
+	VSpeed = lengthdir_y(inputMagnitude * SpeedWalk, inputDirection);
 	
 	
 	//PlayerCollision();
@@ -11,22 +11,27 @@ function PlayerStateFree()
 	
 	//Update Sprite Index
 	var _OldSprite = sprite_index;
+
 	
-	if (InputMagnitude != 0)
-		{
-		direction = InputDirection
-		sprite_index = SpriteRun;
-		}
+	if (inputMagnitude != 0)
+	{
+		direction = inputDirection;
+		sprite_index = spriteRun;
+	}
 		
-	else sprite_index = SpriteIdle;
+	else if (!instance_exists(oCutscene)) {
+		localFrame = 0;
+		sprite_index = spriteIdle;
+	}
 	
-	if (_OldSprite != sprite_index) LocalFrame = 0;
+	if (_OldSprite != sprite_index) localFrame = 0;
 	
 	//Update Image Index
 	PlayerAnimateSprite();
 	
+	/*
 	//Activate key logic for when npc is near
-	if (KeyActivate)
+	if (keyActivate)
 	{
 		if (ActiveTextBox == noone)
 		{
@@ -56,6 +61,7 @@ function PlayerStateFree()
 			ActiveTextBox = noone;
 		}
 	}
-	
+	*/
+
 }
 	

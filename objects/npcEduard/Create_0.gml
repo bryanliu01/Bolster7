@@ -1,7 +1,7 @@
 if instance_exists(oIntroRoom1) {
 	Text = 
 	[
-	"Welcome, O Player, aboard this humble space ship",
+	"Welcome, O Player, aboard this humble space ship. I hope you enjoy your stay here. two plus two is four minus one thats three quick maths everyday mans on the block smoke trees",
 	"Proceed to the next room.",
 	[
 	"This is response one.",
@@ -52,3 +52,6 @@ if instance_exists(oIntroRoom3) {
 	Speakers = [id];
 	nextLine = [-2];
 }
+
+spriteIdle = sEduard;
+spriteRun = sEduard;

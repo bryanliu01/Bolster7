@@ -26,7 +26,7 @@ healthBarHeight = sprite_get_height(sHealthBar);
 
 drawTarget = false;
 
-nameTitle = "Training Dummy";
+nameTitle = "Training Bot";
 
 //Replace sprite with sequence name
 unitSequence = layer_sequence_create("Sequences",x,y,seqHologramBattle);

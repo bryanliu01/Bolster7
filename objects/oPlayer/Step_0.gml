@@ -3,12 +3,12 @@ KeyLeft = keyboard_check(vk_left);
 KeyRight = keyboard_check(vk_right);
 KeyUp = keyboard_check(vk_up);
 KeyDown = keyboard_check(vk_down);
-KeyActivate = keyboard_check_pressed(ord("Z"));
+keyActivate = keyboard_check_pressed(ord("Z"));
 KeyOther = keyboard_check_pressed(ord("X"));
 KeyItem = keyboard_check_pressed(ord("C"));
 
-InputDirection = point_direction(0,0,KeyRight-KeyLeft,KeyDown-KeyUp);
-InputMagnitude = (KeyRight - KeyLeft != 0) || (KeyDown - KeyUp != 0);
+inputDirection = point_direction(0,0,KeyRight-KeyLeft,KeyDown-KeyUp);
+inputMagnitude = (KeyRight - KeyLeft != 0) || (KeyDown - KeyUp != 0);
 
 if (!global.GamePaused) 
 {
@@ -16,15 +16,26 @@ if (!global.GamePaused)
 		!instance_exists(oTextBoxBeta) &&
 		!instance_exists(oTextBoxEntity))
 	{
-	script_execute(state);
+		lastState = state;
+		state = PlayerStateFree;
 	}
 }
 
-if (instance_exists(oCutscene))
+if (instance_exists(oCutscene) 
+|| instance_exists(oTextBoxBeta) 
+|| instance_exists(oTextBoxEntity)
+|| instance_exists(oTextBox))
 {
-	image_index = 0;
+	//sprite_index = spriteIdle;
+	//var _CardinalDirection = round(direction/90);
+	//var _TotalFrames = sprite_get_number(sprite_index) / 4;
+	//image_index = (_CardinalDirection * _TotalFrames);
+	state = PlayerStateLocked;
+	
+	
 }
 
-if (!instance_exists(oAlpha)) {
-	depth = -bbox_bottom;
-}
+depth = -bbox_bottom;
+
+
+script_execute(state);

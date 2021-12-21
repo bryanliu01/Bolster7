@@ -12,10 +12,8 @@ prevHeightHalf = camera_get_view_height(cam) * 0.5;
 prevViewWidth = camera_get_view_width(cam);
 prevViewHeight = camera_get_view_height(cam);
 
+rate = 0.15;
 
-//The variables will head towards a value, initialise as initial position
-xTo = xstart;
-yTo = ystart;
 
 shakeLength = 0;
 shakeMagnitude = 0;
@@ -24,5 +22,7 @@ shakeRemain = 0;
 xCameraOffSet = 0;
 yCameraOffSet = 0;
 
-
 alarm[0] = 1;
+
+testX = 0;
+testY = 0;
