@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sIntroTiles",
-    "path": "sprites/sIntroTiles/sIntroTiles.yy",
-  },
+  "spriteId": null,
   "tileWidth": 16,
   "tileHeight": 16,
   "tilexoff": 0,

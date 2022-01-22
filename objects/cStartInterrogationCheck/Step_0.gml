@@ -1,0 +1,1 @@
+if (instance_exists(oTextBox) && collision_rectangle(x - Radius, y - Radius, x + Radius, y + Radius, oPlayer, false, false)) oPlayer.image_index = 0;

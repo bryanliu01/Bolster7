@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "TextBox",
-    "path": "folders/Objects/TextBox.yy",
+    "name": "Scrapped",
+    "path": "folders/Objects/Managers/Scrapped.yy",
   },
   "resourceVersion": "1.0",
   "name": "oTextBoxBeta",

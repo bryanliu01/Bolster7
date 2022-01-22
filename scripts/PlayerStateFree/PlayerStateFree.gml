@@ -1,6 +1,11 @@
 function PlayerStateFree()
 {
-		
+	SpeedWalk = 3.0;
+	
+	inputDirection = point_direction(0,0,KeyRight-KeyLeft,KeyDown-KeyUp);
+	inputMagnitude = (KeyRight - KeyLeft != 0) || (KeyDown - KeyUp != 0);
+
+
 	//Movement After Callibration
 	HSpeed = lengthdir_x(inputMagnitude * SpeedWalk, inputDirection);
 	VSpeed = lengthdir_y(inputMagnitude * SpeedWalk, inputDirection);
@@ -28,6 +33,29 @@ function PlayerStateFree()
 	
 	//Update Image Index
 	PlayerAnimateSprite();
+	
+	if (keyActivate)
+	{
+		if (ActiveTextBox == noone)
+		{
+			var _InstEnt = collision_rectangle(x - Radius, y - Radius, x + Radius, y + Radius, interactFrame, false, false)
+	
+			//Create Entity TextBox
+			if (_InstEnt != noone) {
+				
+				with (_InstEnt) {
+					var _TBox = CreateTextBoxNew(textID);
+				}
+				ActiveTextBox = _TBox;
+			}
+		
+		}
+		if (ActiveTextBox != noone)
+		{
+
+			ActiveTextBox = noone;
+		}
+	}
 	
 	/*
 	//Activate key logic for when npc is near

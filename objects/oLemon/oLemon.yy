@@ -11,8 +11,8 @@
   },
   "persistent": false,
   "parentObjectId": {
-    "name": "entityFrame",
-    "path": "objects/entityFrame/entityFrame.yy",
+    "name": "interactFrame",
+    "path": "objects/interactFrame/interactFrame.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

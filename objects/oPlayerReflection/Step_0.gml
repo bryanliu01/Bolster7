@@ -12,3 +12,8 @@ if (oPlayer.image_index >= 12 && oPlayer.image_index < 16) image_index = oPlayer
 else if (oPlayer.image_index >= 4 && oPlayer.image_index < 8) image_index = oPlayer.image_index + 8;
 
 else image_index = oPlayer.image_index;
+
+
+if (oPlayer.y < 192 && oPlayer.x < 576 && oPlayer.x > 380) {
+	depth = -bbox_bottom;
+}

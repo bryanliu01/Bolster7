@@ -1,8 +1,15 @@
-/*
-if (room = rBattleRoom) {
-	currentMusic = bgmTrainedToKill;
-}
+//*****Music Setup*****//
 
-bgm = audio_play_sound(currentMusic, 0, false);
+currentRoom = noone;
 
-loop_length = 103.3846;
+global.switchMusic = noone;
+global.currentMusic = noone;
+
+musicAllowed = true;
+loopLength = 0;
+bgm = noone;
+
+//Let some other function override the music player
+override = false;
+
+pos = 0;

@@ -29,8 +29,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Objects/Managers.yy",
+    "name": "Faders",
+    "path": "folders/Objects/Managers/Faders.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWhite",

@@ -1,14 +1,12 @@
-/// @desc RoomTransition(Type, TargetRoom)
-/// @arg Type
-/// @arg TargetRoom
-function RoomTransition(Type, TargetRoom)
+//transition between rooms and toggle between types
+function RoomTransition(_type, _targetRoom)
 {
 	if (!instance_exists(oTransition))
 	{
 		with (instance_create_depth(0, 0, -9999, oTransition))
 		{
-			Type = argument[0];
-			TargetRoom = argument[1];
+			type = _type;
+			targetRoom = _targetRoom;
 			
 		}
 	}

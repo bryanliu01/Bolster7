@@ -1,9 +1,8 @@
-///@arg id
-///@arg VariableNameString
-///@arg Value
-function ChangeVariable(obj, variableNameString, value){
-	with (obj) {
-		variableNameString = value;
+//Changes a variable of an instance in the room
+function ChangeVariable(obj, variableName, value){
+	if (instance_exists(obj)) {
+		with (obj) {
+			variableName = value;
+		}
 	}
-	CutsceneEndAction();
 }

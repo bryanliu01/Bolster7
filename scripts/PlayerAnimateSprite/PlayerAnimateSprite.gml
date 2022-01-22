@@ -1,5 +1,5 @@
 function PlayerAnimateSprite()
-{
+{	
 	if (instance_exists(oPlayer)) {
 		var _CardinalDirection = round(direction/90);
 		var _TotalFrames = sprite_get_number(sprite_index) / 4;

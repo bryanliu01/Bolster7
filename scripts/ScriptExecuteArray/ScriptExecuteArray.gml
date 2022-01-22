@@ -8,6 +8,7 @@ function ScriptExecuteArray(scr,args)
 	
 	switch (array_length_1d(args))
 	{
+		case 0: return script_execute(scr); break;
 		
 		case 1: return script_execute(scr, args[0]);
 		

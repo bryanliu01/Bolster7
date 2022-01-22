@@ -2,12 +2,12 @@
 ///@arg imagespeed
 
 
-function CutsceneChangeImageSpeed()
+function CutsceneChangeImageSpeed(obj, spd)
 {
-	if (instance_exists(argument0)) var _Inst = instance_id_get(argument0);
-	with (_Inst)
+	
+	with (obj)
 	{
-		image_speed = argument1;
+		image_speed = spd;
 	}
 	CutsceneEndAction();
 

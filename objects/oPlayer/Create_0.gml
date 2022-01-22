@@ -14,20 +14,18 @@ SpeedWalk = 3.0;
 spriteRun = sPlayerRun;
 spriteIdle = sPlayer;
 
-if (global.TargetX != -1)
+localFrame = 0;
+
+if (global.targetX != -1)
 {
-	x = global.TargetX;
-	y = global.TargetY;
-	direction = global.TargetDirection;
+	x = global.targetX;
+	y = global.targetY;
+	direction = global.targetDirection;
 	
 }
 //Collision Check Setup
 Radius = 16;
 ActiveTextBox = noone;
 
-//Textbox Setup
-Portrait = talkPlayer;
-PortraitIndex = 0;
-Voice = vDefault;
-Name = "Player";
-
+//Override frame
+override = false;

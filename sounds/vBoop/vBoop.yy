@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.33,
   "preload": false,
@@ -13,8 +14,8 @@
   "soundFile": "vBoop.mp3",
   "duration": 1.906917,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Voices",
+    "path": "folders/Sounds/Voices.yy",
   },
   "resourceVersion": "1.0",
   "name": "vBoop",
