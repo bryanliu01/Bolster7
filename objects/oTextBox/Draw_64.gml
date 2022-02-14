@@ -8,7 +8,10 @@ textBoxY = RESOLUTIONH - textBoxHeight - 20;;
 //Setup to run for one frame
 
 if (!setup) {
-	
+	//If no text is in the page, destroy text box
+	if (text[0] == "") {
+		instance_destroy();
+	}
 	setup = true;
 	draw_set_colour(c_white);
 	draw_set_font(fGUILarge);
@@ -190,6 +193,9 @@ if (speakerSprite[page] != noone) {
 	
 	draw_sprite_ext(sPortraitFrame, textBoxImage, textBoxX + portraitXOffset[page], textBoxY, 1, 1, 0, c_white, 1);
 	draw_sprite_ext(sprite_index, image_index, speakerX, textBoxY, speakerSide[page], 1, 0, c_white, 1);
+	
+	//Draw additional cosmetics of npcs not naturally bound to frames on their sprites
+	DrawCosmetics(speakerX);
 }
 
 //Draw textbox if its animated, else this works for static boxes too

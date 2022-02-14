@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "vTink.wav",
-  "duration": 0.115374,
+  "duration": 0.158662,
   "parent": {
     "name": "Voices",
     "path": "folders/Sounds/Voices.yy",

@@ -1,3 +1,6 @@
+function AddGold(_value) {
+	global.gold += _value;
+}
 
 function AddItem(_item) {
 	if (array_length(oItemManager.inv) < oItemManager.maxItems) {
@@ -13,9 +16,8 @@ function RemoveItem(_item) {
 }
 
 function ReplaceItem(_oldItem, _newItem) {
-	var itemPos = FindItem(_oldItem);
-	if (itemPos != -1) array_set(oItemManager.inv, itemPos, _newItem);
-	else show_debug_message("Item not found!");
+	RemoveItem(_oldItem);
+	AddItem(_newItem);
 	
 }
 
@@ -56,7 +58,62 @@ function StoreAllItems() {
 			[CutsceneCreateTextBox, "discard sneckPaper"]
 			]
 		),
-	
+		
+		ductTape : new CreateItem (
+			"Duct Tape",
+			"A roll of class C duct tape. Gain one bar of energy in battle.",
+			[
+			[CutsceneCreateTextBox, "use ductTape"]
+			],
+			[
+			[CutsceneCreateTextBox, "default discard yes"]
+			]
+		),
+		
+		emptyTape : new CreateItem (
+			"Empty Tape",
+			"Somehow it feels more powerful than before. Gain two bars of energy in battle",
+			[
+			[CutsceneCreateTextBox, "use ductTape"]
+			],
+			[
+			[CutsceneCreateTextBox, "default discard yes"]
+			]
+		),
+		
+		healthBox : new CreateItem (
+			"Sml HP Box",
+			"A small box that contains health. Gain 20HP.",
+			[
+			[CutsceneCreateTextBox, "use healthBox"]
+			],
+			[
+			[CutsceneCreateTextBox, "default discard yes"]
+			]
+		),
+		
+		giantPill : new CreateItem (
+			"Giant Pill",
+			"Now in easy to swallow size! Gain two energy bars.",
+			[
+			[CutsceneCreateTextBox, "use giantPill"]
+			],
+			[
+			[CutsceneCreateTextBox, "default discard yes"]
+			]
+		),
+		
+		greenMould : new CreateItem (
+			"Green Mould",
+			"A delicious concoction of failed medicines. Effect is unknown.",
+			[
+			[CutsceneCreateTextBox, "use greenMould"]
+			],
+			[
+			[CutsceneCreateTextBox, "default discard yes"]
+			]
+		),
+		
 		cardKey : new CreateItem (
 			"Card Key",
 			"It's a card in the shape of a key. Used to access the elevator.",

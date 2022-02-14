@@ -7,6 +7,7 @@ SpeedWalk = 2.0;
 spriteRun = sPlayerRun;
 spriteIdle = sPlayer;
 spriteOpenMenuDown = sPlayerOpenMenuDown;
+spriteSalute = sPlayerSalute;
+
 localFrame = 0;
 
-image_index = 13;

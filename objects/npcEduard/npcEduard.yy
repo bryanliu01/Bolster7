@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "MotherShiptNPCs",
-    "path": "folders/Objects/MotherShipObjects/MotherShiptNPCs.yy",
+    "name": "General NPCs",
+    "path": "folders/Objects/MotherShipObjects/MotherShiptNPCs/General NPCs.yy",
   },
   "resourceVersion": "1.0",
   "name": "npcEduard",

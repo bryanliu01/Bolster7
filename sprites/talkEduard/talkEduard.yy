@@ -54,7 +54,7 @@
             {"id":"ab8bf48d-a89b-494b-89a1-d5b66458602d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5f24bfb1-8c45-4e58-b290-c5ce542cc57d","path":"sprites/talkEduard/talkEduard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d8a5a0bf-a133-4b8c-84cf-f908bcf60642","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b43854ba-d027-408e-873a-1dd3407f86d0","path":"sprites/talkEduard/talkEduard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cbf93be7-3afa-4d2d-a06f-f8d8c26cbc04","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e8aaaf1-d46c-4d0a-9f72-068f9578d30b","path":"sprites/talkEduard/talkEduard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Eduard",
-    "path": "folders/Sprites/IntroSprites/Eduard.yy",
+    "path": "folders/Sprites/MSSprites/Eduard.yy",
   },
   "resourceVersion": "1.0",
   "name": "talkEduard",

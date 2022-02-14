@@ -3,11 +3,17 @@ if oEventFlag.enabledDrives {
 	optionLength = array_length(option[global.invLayer]);
 	option[0, 2] = "DRIVES";
 }
-else {
+else if (!oEventFlag.enabledDrives && global.invLayer == 0){
 	optionLength = array_length(option[global.invLayer]) - 1;
 	option[0, 2] = "";
+	
 }
-
+else if (global.invLayer == 1) { 
+	optionLength = array_length(inv);
+}
+else {
+	optionLength = array_length(option[global.invLayer]);
+}
 if (instance_exists(oPlayer)) {
 	if (!instance_exists(oCutscene) && !instance_exists(oTextBox) && keyboard_check_pressed(ord("C"))) {
 		menuIsOpened = !menuIsOpened;

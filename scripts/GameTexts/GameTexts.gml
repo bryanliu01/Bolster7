@@ -128,7 +128,245 @@ switch(textID) {
 	
 	#endregion
 	
+	//Doctor Fixing
+	#region
+	case "MS - doctor fixing":
+		AddTextPage("Curse his scaly hide! Does he have any idea how expensive cybernetic arms cost nowadays?", "anne angry");
+		AddTextPage("You only have yourself to blame Miss Anne.", "tink eyes closed r");
+		AddTextPage("Frisked him 'high and low' have you? Of all places to hide an EMP - how did you miss his hat?", "tink slight worry r");
+		AddTextPage("You had a fleet of elite roboguards at your disposal to process him.", "tink neutral r");
+		AddTextPage("Tink, you designed those robots.", "anne angry");
+		AddTextPage("Yes and they were designed to adapt to their captain. Clearly you taught them well.", "tink neutral r");
+		AddTextPage("...", "anne sulk");
+		AddTextPage("Well luckily he used a gag bomb.", "tink eyes closed r");
+		AddTextPage("Shouldn't be too long now.", "tink neutral r");
+		//Continue cutscene in cDoctorFixing
+	break;
+	
+	case "MS - doctor fixing 2":
+		AddTextPage("Ah! Good. You are here. How did the interrogation go?", "tink neutral r");
+		AddTextPage("As if you have to ask. He's got absolutely nothing.", "anne dejected");
+		AddTextPage("We'll see about that. It looks like our interrogator has something to hand over.", "tink neutral r");
+		//Continue cutscene in cDoctorFixiing
+		
+	break;
+	
+	case "MS - doctor fixing 3":
+		AddTextPage("Well look here, the location of interest where Sneck was supposed to head off to.", "tink slight worry r");
+		AddTextPage("WHAT!?", "anne shock");
+		AddTextPage("THAT TREACHEROUS SNAKE. FIVE HOURS I SPENT CODDLING HIM", "anne angry");
+		AddTextPage("How did a rookie do it in fifteen minutes? *sniff* There's no justice.", "anne sad");
+		AddTextPage("I'll transmit the news to the director. Why don't you have a look around while he comes down?", "tink neutral r");
+	break;
+	
+	case "MS - tape":
+		AddTextPage("A roll of duct tape sits on the bench.");
+			AddOption("Take it.", "MS - take tape");
+			AddOption("Leave it.", "null");
+	break;
+	
+	case "MS - take tape":
+		AddTextPage("Duct Tape has been added to your inventory.");
+		SetScript([AddItem, global.itemList.ductTape]);
+		SetScript([TookTape]);
+	break;
+	
+	case "MS - giant pill":
+		AddTextPage("A large easy to swallow pill lies on top of the bench.");
+			AddOption("Take it.", "MS - take giant pill");
+			AddOption("Leave it.", "null");
+			
+	break;
+	
+	case "MS - take giant pill":
+		AddTextPage("Giant Pill has been added to your inventory.");
+		SetScript([AddItem, global.itemList.giantPill]);
+		SetScript([TookGiantPill]);
+	break;
+	
+	case "MS - health box":
+		AddTextPage("A standard medical health box sits on top of the bench.");
+			AddOption("Take it.", "MS - take health box");
+			AddOption("Leave it.", "null");
+	break;
+	
+	case "MS - take health box":
+		AddTextPage("Health Box has been added to your inventory.");
+		SetScript([AddItem, global.itemList.healthBox]);
+		SetScript([TookHealthBox]);
+	break;
+	
+	case "MS - green mould":
+		AddTextPage("A failed medicine experiment sits pitifully in the trash bin.");
+		AddTextPage("This can't possibly be good.");
+			AddOption("Take it.", "MS - take green mould");
+			AddOption("Leave it.", "null");
+	break;
+	
+	case "MS - take green mould":
+		AddTextPage("Green Mould has been added to your inventory.");
+		SetScript([AddItem, global.itemList.greenMould]);
+		SetScript([TookGreenMould]);
+	break;
+	
+	case "MS - have a look around":
+		AddTextPage("Why don't you have a look around while Ark comes down?", "tink neutral r");
+	break;
+	
+	case "MS - pass me that tape":
+		AddTextPage("Hey rook. Do you have any tape?", "anne sad");
+		AddTextPage("I need to wrap my diginity back together.", "anne dejected");
+		if (FindItem(global.itemList.ductTape) != -1) {
+			AddOption("Give Duct Tape", "MS - thanks for the tape");
+			AddOption("Don't give Duct Tape", "null");
+		}
+		else AddOption("No Tape", "null");
+		
+	break;
+	
+	case "MS - thanks for the tape":
+		AddTextPage("Thanks.", "anne dejected");
+		AddTextPage("You recieved Empty Tape.");
+		SetScript([FinishedGivingTapeToAnne]);
+		SetScript([ReplaceItem, global.itemList.ductTape, global.itemList.emptyTape]);
+	break;
+	
+	case "MS - giant eye closed":
+		AddTextPage("It is closed");
+	break;
+	
+	case "MS - anne feels better":
+		AddTextPage("You know what? Things are starting to feel better now. Thanks rook.", "anne neutral");
+		SetScript([CreateCutsceneObjectAndLoadID, "MS - ark introduction"]);
+	break;
+	
+	case "MS - ark introduction":
+		AddTextPage("Sir!", "tink neutral");
+		SetScript([InstanceChange, npcTinkFixing, npcTinkIdleUp, true]);
+		AddTextPage("Sir!", "anne neutral2");
+	break;
+	
+	case "MS - ark introduction 2":
+		AddTextPage("What is this about a location of interest?", "ark neutral");
+		AddTextPage("This paper here, the new officer has found the rendezvous point.", "tink neutral");
+		AddTextPage("Hmph. Took you people long enough.", "ark neutral");
+		SetScript([FixFrame, npcArkCutscene, 0, 9, 180]);
+		AddTextPage("This is supposedly the most elite team of crusaders that falls under my command.", "ark look down");
+		AddTextPage("Yet they can not even complete simple wardrobe duty.", "ark neutral");
+		AddTextPage("Well, you see...", "anne sad");
+		AddTextPage("Save it. I want results. Not excuses full of sweet nothings.", "ark look down");
+		SetScript([FixFrame, npcArkCutscene, 0, 13, 270]);
+		AddTextPage("You, fledgling. Come to the main office on this floor.", "ark neutral");
+		AddTextPage("We have matters to discuss.", "ark look down");
+		SetScript([FinishedArkIntroduction]);
+	break;
+	
+	case "MS - ark introduction 3":
+		AddTextPage("Hey Anne, you alright?", "tink slight worry r");
+		AddTextPage("Yeah... I'm alright.", "anne sulk");
+		AddTextPage("I'll continue working on your arm. Just a few more touches and then you'll be good as new.", "tink neutral r");
+		AddTextPage("And you. Officer. Stop saluting. You look ridiculous.", "tink slight worry r");
+	break;
+	
+	case "MS - finished ark introduction":
+		AddTextPage("Well? What are you waiting for? Go get your standing ovation.", "anne sulk");
+	break;
+	
+		
+	case "MS - you heard the director":
+		AddTextPage("You heard the director, head on over to the main office.", "tink neutral r");
+		AddTextPage("Anne will be fine. You might be new around here. But for us, this is simply a Tuesday.", "tink neutral r");
+	break;
+	
+	#endregion
+	
+	//Reception Room
+	#region
+	case "MS - npc giant eye":
+		AddTextPage("Director Ark is waiting for you. Head on towards the main office north of here.", "giant eye neutral");
+		AddTextPage("Huh? What about the giant eye in the doctor's room?", "giant eye neutral");
+		AddTextPage("The eye opened and closed?", "giant eye neutral");
+		AddTextPage("Don't be silly. Even I can't close my eyes. I just have a good quality contact lens.", "giant eye neutral");
+		SetScript([FinishedNPCGiantEyeIntroduction]);
+	break;
+	
+	case "MS - npc giant eye 2":
+		AddTextPage("The main office is just north of here.", "giant eye neutral");
+	break;
+	
+	case "MS - mosquito sign":
+		AddTextPage("There is a warning issued about space mosquitos hovering about this area.");
+		AddTextPage("Warnings are for losers.");
+	break;
+	
+	case "MS - stack of paper":
+		AddTextPage("A giant stack of paper that is used for processing visitors.");
+	break;
+	
+	#endregion
+	
+	//Reception Hallway
+	#region
+	case "MS - open the giant door":
+		AddTextPage("Enter the main office?");
+			AddOption("Enter.", "MS - enter main office");
+			AddOption("Don't Enter.", "null");
+	break;
+		case "MS - enter main office":
+			CreateCutsceneObjectAndLoadID("MS - open the giant door");
+			with (oTextBox) instance_destroy();
+			
+			break;
+	#endregion
+	
+	//Main Office
+	#region
+	case "MS - activate the desk?":
+		AddTextPage("Activate the desk?");
+			AddOption("Yes.", "MS - desk activated");
+			AddOption("No.", "null");
+	break;
+		case "MS - desk activated":
+			with oMainOfficeDesk initialiseGame = true;
+			with (oTextBox) instance_destroy();
+		break;
+	#endregion
+	
+	//ENTITIES
+	
+	//Chest in rMSTreasureRoom
+	#region
+	case "MS - chestrMSTreasureRoom":
+		var smallGold = MSGenerateSmallNumberOfGold();
+		AddTextPage("Obtained " + string(smallGold) + " gold.");
+		SetScript([AddGold, smallGold]);
+		SetScript([FinishedTreasurerMSTreasureRoomFlag]);
+	break;
+	
+	case "MS - noLootrMSTreasureRoom":
+		AddTextPage("You dig through the bag again... There is nothing.");
+	break;
+
+	#endregion
+	
 	//ITEMS
+	#region
+	
+	//Sign in the waiting room
+	case "MS - doctor's office": 
+		AddTextPage("Treatment Room");
+	break;
+	
+	case "MS - waiting room tv":
+		AddTextPage("An ancient display piece sits in the corner gathering dust.");
+		AddTextPage("Its age is unknown, but it could easily be in the thousands.");
+	break;
+	
+	case "MS - waiting room couch":
+		AddTextPage("A soft couch that is made of material that is long extinct.");
+	break;
+	
+	#endregion
 	
 	//Sneck Paper
 	#region
@@ -140,7 +378,7 @@ switch(textID) {
 		
 	case "use drySneckPaper":
 		AddTextPage("You used the dry paper.");
-		AddTextPage("The dry paper is still the dry paper");
+		AddTextPage("The dry paper is still the dry paper.");
 		break;
 	
 	case "discard sneckPaper":
@@ -178,12 +416,19 @@ switch(textID) {
 		break;
 	
 	case "default discard yes":
-		AddTextPage("Item is discarded");
+		AddTextPage(string(oItemManager.selectedItem) + " is discarded.");
 		//TODO set script for remove item
+		SetScript([RemoveItem, oItemManager.selectedItem]);
 		break;
 	
 	case "default discard no":
 		AddTextPage("Item is not discarded");
+		break;
+		
+	case "null":
+		with (oTextBox) {
+			instance_destroy();
+		}
 		break;
 			
 	default:

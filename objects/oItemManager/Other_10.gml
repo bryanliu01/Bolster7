@@ -6,3 +6,4 @@ if (objectScript != noone) {
 //If there is no script assigned to it, play a default effect
 //TODO
 
+	

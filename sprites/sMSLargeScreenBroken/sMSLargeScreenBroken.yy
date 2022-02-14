@@ -201,8 +201,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "IntroSprites",
-    "path": "folders/Sprites/IntroSprites.yy",
+    "name": "MSSprites",
+    "path": "folders/Sprites/MSSprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sMSLargeScreenBroken",

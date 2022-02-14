@@ -62,7 +62,7 @@
             {"id":"9274c91e-6caf-43ee-8a66-feb996b653b3","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4930b244-a69b-40f2-bc32-7ba11c61b176","path":"sprites/sEduardDrop/sEduardDrop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8b47b54d-c08a-4abe-96e2-124d1f8713f2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"760525d0-a70d-4ab9-9e8c-6ff861fbd1b2","path":"sprites/sEduardDrop/sEduardDrop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b170e25a-b26b-476d-afdc-f77eadb1a854","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3dbc632-3347-48f7-8016-7508663701b6","path":"sprites/sEduardDrop/sEduardDrop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -90,7 +90,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Eduard",
-    "path": "folders/Sprites/IntroSprites/Eduard.yy",
+    "path": "folders/Sprites/MSSprites/Eduard.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEduardDrop",

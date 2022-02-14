@@ -6,6 +6,8 @@
 ///@arg d for the direction the sprite is facing
 
 function CutsceneMoveCharacter(obj, xPos, yPos, relative, spd, d) {
+	
+	
 	if (xDest == -1) {
 		if (!relative) {
 			xDest = xPos;

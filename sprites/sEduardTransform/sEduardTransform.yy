@@ -82,7 +82,7 @@
             {"id":"e1851be5-adfd-44e1-af19-2494e2f5128e","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"944b43c3-261f-48e2-9d72-ed707f88d03b","path":"sprites/sEduardTransform/sEduardTransform.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ec9aef27-3aba-4d94-976e-67f798ecef90","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0af5429d-cfca-424d-8ac9-5b28e37ffb32","path":"sprites/sEduardTransform/sEduardTransform.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6cf8d550-810d-4263-a521-7cf65f813a78","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"656b10c5-4957-4d07-b0f7-2d1f01c4b756","path":"sprites/sEduardTransform/sEduardTransform.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -110,7 +110,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Eduard",
-    "path": "folders/Sprites/IntroSprites/Eduard.yy",
+    "path": "folders/Sprites/MSSprites/Eduard.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEduardTransform",

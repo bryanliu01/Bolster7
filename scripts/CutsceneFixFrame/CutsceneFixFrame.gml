@@ -1,21 +1,16 @@
-//Specific function for oPlayer who has not spawned yet at the creation of
-//a cutscene object. This function changes an object to another object in the
-//same direction all in one frame. It is not recommended to switch direction in another index
-//of the cutscene array because it takes one full additional frame to execute, leading to direction
-//switching to default direction upon obejct generation.
-function CutsceneChangeInstanceAndFixFrame(objFrom, objTo, perfEvents, spr, index, dir){
-	with(objFrom)
-	{
-		instance_change(objTo, perfEvents);
-		
-	}
-	
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function CutsceneFixFrame(obj, spr, index, dir){
 	//Face downwards
-	with (objTo) {
+	with (obj) {
 		switch (spr) {
-			case 0: sprite_index = spriteIdle;
-			case 1: sprite_index = spriteRun;
-			case 2: sprite_index = spriteOpenMenuDown;		
+			case 0: sprite_index = spriteIdle; break;
+			case 1: sprite_index = spriteRun; break;
+			case 2: sprite_index = spriteOpenMenuDown; break;
+			case 3: sprite_index = spriteSalute; break;
+			
+			//Special case for tink fixing
+			case 4: sprite_index = spriteFixing; break;
 		}
 		image_index = index;
 		direction = dir;

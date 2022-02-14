@@ -78,7 +78,7 @@
             {"id":"7ed1f2b2-e692-4860-bf99-aeff35e1b0e7","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f8bdec13-1dfa-4b9a-b25d-b52ac035065e","path":"sprites/sEduard/sEduard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8cadf2a7-fe51-426f-b629-acb87a9790a9","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad268983-6fb8-41f1-91d9-f8a22056c904","path":"sprites/sEduard/sEduard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1fcfb602-3261-4a7f-9734-f09b3fd75fc8","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e7d3315-b79a-4403-98fe-3a07141a7999","path":"sprites/sEduard/sEduard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -106,7 +106,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Eduard",
-    "path": "folders/Sprites/IntroSprites/Eduard.yy",
+    "path": "folders/Sprites/MSSprites/Eduard.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEduard",

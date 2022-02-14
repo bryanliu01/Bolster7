@@ -17,6 +17,7 @@ if (menuIsOpened && !instance_exists(oTextBox)) {
 	//Draw base menu box
 	draw_sprite_stretched(sInventoryBox, 0, invBoxX, invBoxY, invBoxWidth, invBoxHeight);
 	
+	//Draw selection colour on layer 0
 	if (global.invLayer == 0) {
 		//Draw base menu text
 		for (var i = 0; i < 3; i++) {
@@ -42,6 +43,8 @@ if (menuIsOpened && !instance_exists(oTextBox)) {
 			}
 		}
 	}
+	
+	//Else don't draw selection
 	else if (global.invLayer != 0) {
 		for (var i = 0; i < 3; i++) {
 			var textY = invBoxY + border + i * lineSep - 4;
@@ -87,12 +90,13 @@ if (menuIsOpened && !instance_exists(oTextBox)) {
 			}
 		break;
 		
-		//Inventory Box
+		//Inventory box
 		case 1:
 			promptEnabled = false;
 			InteractInventory();
 			break;
 		
+		//Inventory prompt box
 		case 2:
 			promptEnabled = true;
 			ShowInventoryPrompt();
@@ -102,11 +106,27 @@ if (menuIsOpened && !instance_exists(oTextBox)) {
 	
 	//Correct the option length after switching menu layer
 	optionLength = array_length(option[global.invLayer]);
+	
+	//Display gold amount
+	var walletX = invBoxX;
+	var walletY = invBoxY + invBoxHeight;
+	var walletWidth = invBoxWidth;
+	var walletHeight = 2 * border + string_height("M");
+	draw_sprite_stretched(sInventoryBox, 0 ,walletX, walletY, walletWidth, walletHeight);
+	
+	//Draw gold number
+	draw_set_font(fText);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	draw_set_colour(c_white);
+	_c = c_yellow;
+	draw_text_colour(walletX + border, walletY + border,string(global.gold) + "G", _c, _c, _c, _c, 1);
 	 
 }
 else if (!menuIsOpened) {
 	global.invLayer = 0;
 	markerPosition = 0;
 	promptPos = 0;
+	selectedItem = noone;
 }
 

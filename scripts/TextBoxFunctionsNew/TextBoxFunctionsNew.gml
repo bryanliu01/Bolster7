@@ -12,6 +12,7 @@ function SetDefaultsForText() {
 	speakerSide[pageNumber] = noone;
 	speakerVoice[pageNumber] = vDefault;
 	scripts[pageNumber] = -1;
+	scr = 0;
 
 }
 
@@ -39,7 +40,8 @@ function CreateTextBoxNew(_text_id) {
 //Input an array as its parameter with the script as the first element
 //Input parameters of that script as subsequent elements
 function SetScript(scrArray) {
-	scripts[pageNumber - 1] = scrArray;
+	scripts[pageNumber - 1, scr] = scrArray;
+	scr++;
 }
 ///@arg text
 ///@arg [character]
@@ -131,6 +133,15 @@ function AddTextPage(_text) {
 				speakerSide[pageNumber] = 1;
 				speakerVoice[pageNumber] = vTink;
 				break;
+				
+			case "tink neutral r":
+				speakerObject[pageNumber] = npcTink;
+				speakerSprite[pageNumber] = tTinkNeutral;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = -1;
+				speakerVoice[pageNumber] = vTink;
+				break;
+				
 			case "tink slight worry":
 				speakerObject[pageNumber] = npcTink;
 				speakerSprite[pageNumber] = tTinkSlightWorry;
@@ -138,22 +149,150 @@ function AddTextPage(_text) {
 				speakerSide[pageNumber] = 1;
 				speakerVoice[pageNumber] = vTink;
 				break;
+				
+			case "tink slight worry r":
+				speakerObject[pageNumber] = npcTink;
+				speakerSprite[pageNumber] = tTinkSlightWorry;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = -1;
+				speakerVoice[pageNumber] = vTink;
+				break;
+				
 			case "tink surprised not talking":
 				speakerObject[pageNumber] = npcTink;
 				speakerSprite[pageNumber] = tTinkSurprised;
 				textBoxSprite[pageNumber] = sTextBoxStretched;
 				speakerSide[pageNumber] = 1;
-				speakerVoice[pageNumber] = vDefault;
+				speakerVoice[pageNumber] = vAnne;
 				break;
+				
 			case "tink eyes closed":
 				speakerObject[pageNumber] = npcTink;
 				speakerSprite[pageNumber] = tTinkEyesClosed;
 				textBoxSprite[pageNumber] = sTextBoxStretched;
 				speakerSide[pageNumber] = 1;
-				speakerVoice[pageNumber] = noone;
+				speakerVoice[pageNumber] = vTink;
+				break;
+				
+			case "tink eyes closed r":
+				speakerObject[pageNumber] = npcTink;
+				speakerSprite[pageNumber] = tTinkEyesClosed;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = -1;
+				speakerVoice[pageNumber] = vTink;
+				break;
+			
+			#endregion
+			
+			//Anne
+			#region
+			case "anne neutral":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneNeutral;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+				
+			case "anne neutral2":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneNeutral2;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+			
+			case "anne angry":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneAngry;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+			
+			case "anne incredulous":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneIncredulous;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+			
+			case "anne laugh":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneLaugh;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+			
+			case "anne sad":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneSad;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+			
+			case "anne sulk":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneSulk;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+				
+			case "anne dejected":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneDejected;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+				
+			case "anne shock":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneShock;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
+			
+			#endregion
+			
+			//Ark
+			#region
+			case "ark neutral":
+				speakerObject[pageNumber] = npcArk;
+				speakerSprite[pageNumber] = tArkNeutral;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vArk;
+				break;
+				
+			case "ark look down":
+				speakerObject[pageNumber] = npcArk;
+				speakerSprite[pageNumber] = tArkLookDown;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vArk;
+				break;
+			
+			#endregion
+			
+			//*****NPC*****//
+			#region
+			
+			//Giant Eye
+			case "giant eye neutral":
+				speakerObject[pageNumber] = npcGiantEye;
+				speakerSprite[pageNumber] = noone;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = noone;
+				speakerVoice[pageNumber] = vDefault;
 				break;
 			#endregion
-				
+			
 			default:
 				speakerSprite[pageNumber] = talkEduard;
 				textBoxSprite[pageNumber] = sTextBoxStretched;

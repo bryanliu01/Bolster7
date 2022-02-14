@@ -1,13 +1,9 @@
 function PlayMusic(sound, boolOverride) {
-	
-	if (!instance_exists(oMusicManager)) instance_create_layer(0, 0, "Game", oMusicManager);
-	
+
 	with (oMusicManager) {
-		global.switchMusic = sound;
-		GetLoopLength(sound);
-		override = boolOverride;
-	}
-			
+		global.music = sound;
+		event_user(0);
+	}		
 	
 }
 
@@ -32,19 +28,31 @@ function OverrideMusic(boolOverride) {
 
 //Stores the information of song lengths for seamless loops
 function GetLoopLength(songName) {
+	var _loopLength = -1;
 	switch (songName) {
 		case bgmSneckTheme:
-			loopLength = 79.255;
+			_loopLength = 79.255;
+			break;
+			
+		case bgmArkTheme:
+			_loopLength = 85.325;
+			break;
+		
+		case bgmTest:
+			_loopLength = 3.69;
 			break;
 		
 		default:
-			loopLength = 9999;
+			_loopLength = 9999;
 			break;
 	}
+	return _loopLength;
 }
 
 function GetRoomMusic() {
 	switch (room) {
+		
+		
 		default:
 			global.currentMusic = noone;
 			break;

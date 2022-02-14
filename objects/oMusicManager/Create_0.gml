@@ -2,7 +2,7 @@
 
 currentRoom = noone;
 
-global.switchMusic = noone;
+global.music = noone;
 global.currentMusic = noone;
 
 musicAllowed = true;

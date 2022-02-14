@@ -45,4 +45,6 @@ promptPos = 0;
 prompt[0] = "Use";
 prompt[1] = "Discard";
 
+global.gold = 0;
+
 

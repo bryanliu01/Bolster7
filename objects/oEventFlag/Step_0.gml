@@ -1,3 +1,4 @@
+#region
 //Player finished entering in first scene
 if (finishedPlayerEntering && (room = rMSHallway)) {
 	if (!instance_exists(oPlayer)) {
@@ -25,3 +26,30 @@ if (finishedInterrogation && room = rMSHallway) {
 if (finishedTinkBriefing && room = rMSHallway) {
 	with cTinkTellsYouToInterrogateSneck instance_destroy();
 }
+
+if (finishedTreasurerMSTreasureRoomFlag && room = rMSTreasureRoom) {
+	with oBackpack textID = "MS - noLootrMSTreasureRoom";
+}
+#endregion
+
+if (finishedDoctorFixing && room = rMSDoctorRoom) {
+	with cDoctorFixing {
+		instance_destroy();
+	}
+}
+
+if (finishedGivingTapeToAnne && !finishedArkIntroduction && room = rMSDoctorRoom) {
+	with npcAnneSitting {
+		textID = "MS - anne feels better";
+	}
+}
+
+else if (finishedArkIntroduction && room = rMSDoctorRoom) {
+	with npcAnneSitting {
+		textID = "MS - finished ark introduction";
+	}
+	with npcTinkFixing {
+		textID = "MS - you heard the director";
+	}
+}
+

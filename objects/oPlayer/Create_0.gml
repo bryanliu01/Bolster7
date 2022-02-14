@@ -14,6 +14,7 @@ SpeedWalk = 3.0;
 spriteRun = sPlayerRun;
 spriteIdle = sPlayer;
 
+
 localFrame = 0;
 
 if (global.targetX != -1)

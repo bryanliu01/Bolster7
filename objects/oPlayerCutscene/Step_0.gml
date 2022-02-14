@@ -3,3 +3,5 @@ if (instance_exists(id)) {
 		state = PlayerStateLocked;
 	}
 }
+
+depth = -bbox_bottom;

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "vDefault.wav",
-  "duration": 0.057687,
+  "duration": 1.620181,
   "parent": {
     "name": "Voices",
     "path": "folders/Sounds/Voices.yy",

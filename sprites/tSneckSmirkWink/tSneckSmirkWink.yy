@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Snek",
-    "path": "folders/Sprites/IntroSprites/Snek.yy",
+    "path": "folders/Sprites/MSSprites/Snek.yy",
   },
   "resourceVersion": "1.0",
   "name": "tSneckSmirkWink",

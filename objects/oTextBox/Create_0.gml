@@ -48,6 +48,8 @@ textPauseTimer = 0;
 
 cutsceneID = "none";
 
-
+//Cosmetic set up
+tick = 0;
+frame = 0;
 
 

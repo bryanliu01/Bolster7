@@ -7,6 +7,27 @@ finishedPlayerEntering = false;
 finishedTinkBriefing = false;
 finishedInterrogation = false;
 
-enabledDrives = false;
+//finished looting the first chest
+finishedTreasurerMSTreasureRoomFlag = false;
 #endregion
+
+//Finished cutscene entering doctor's room
+#region
+
+finishedDoctorFixing = false;
+
+tookTape = false;
+tookGiantPill = false;
+tookHealthBox = false;
+tookGreenMould = false;
+
+finishedGivingTapeToAnne = false;
+finishedArkIntroduction = false;
+
+#endregion
+
+#region
+finishedNPCGiantEyeIntroduction = false;
+#endregion
+enabledDrives = false;
 

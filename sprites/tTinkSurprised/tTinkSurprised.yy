@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Tink",
-    "path": "folders/Sprites/IntroSprites/Tink.yy",
+    "path": "folders/Sprites/MSSprites/Tink.yy",
   },
   "resourceVersion": "1.0",
   "name": "tTinkSurprised",

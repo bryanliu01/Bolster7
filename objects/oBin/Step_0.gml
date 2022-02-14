@@ -1,0 +1,1 @@
+if (oEventFlag.tookGreenMould = true) image_index = 1;

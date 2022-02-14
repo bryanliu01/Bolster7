@@ -12,6 +12,7 @@ if (event_data[? "event_type"] == "sequence event") {
 		break;
 		
 		case "UnitDeath":
+		break;
 		case "UnitHurt":
 			processFinished = true;
 		break;
