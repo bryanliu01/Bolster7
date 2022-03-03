@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"Mat2","path":"sprites/Mat2/Mat2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "Mat2",
     "tags": [],
     "resourceType": "GMSequence",

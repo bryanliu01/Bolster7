@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tAnneShock","path":"sprites/tAnneShock/tAnneShock.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tAnneShock",
     "tags": [],
     "resourceType": "GMSequence",

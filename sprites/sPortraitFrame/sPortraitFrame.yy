@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPortraitFrame","path":"sprites/sPortraitFrame/sPortraitFrame.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPortraitFrame",
     "tags": [],
     "resourceType": "GMSequence",

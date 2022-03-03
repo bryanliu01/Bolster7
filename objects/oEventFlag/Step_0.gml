@@ -1,3 +1,4 @@
+//Introduction
 #region
 //Player finished entering in first scene
 if (finishedPlayerEntering && (room = rMSHallway)) {
@@ -32,6 +33,8 @@ if (finishedTreasurerMSTreasureRoomFlag && room = rMSTreasureRoom) {
 }
 #endregion
 
+//Doctor Room
+#region
 if (finishedDoctorFixing && room = rMSDoctorRoom) {
 	with cDoctorFixing {
 		instance_destroy();
@@ -52,4 +55,15 @@ else if (finishedArkIntroduction && room = rMSDoctorRoom) {
 		textID = "MS - you heard the director";
 	}
 }
+#endregion
+if (finishedArkBriefsPlayer && finishedAnneVentingPlayer && room = rMSMainOffice) {
+	with npcArk textID = "MS - go and get trained 2";
+}
+
+if (finishedAnneTrainingIntro && room = rMSTrainingRoom) {
+	with cAnneTrainsPlayer {
+		instance_destroy();
+	}
+}
+
 

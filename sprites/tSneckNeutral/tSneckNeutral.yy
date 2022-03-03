@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tSneckNeutral","path":"sprites/tSneckNeutral/tSneckNeutral.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tSneckNeutral",
     "tags": [],
     "resourceType": "GMSequence",

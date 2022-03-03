@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sTextBoxcommentout","path":"sprites/sTextBoxcommentout/sTextBoxcommentout.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sTextBoxcommentout",
     "tags": [],
     "resourceType": "GMSequence",

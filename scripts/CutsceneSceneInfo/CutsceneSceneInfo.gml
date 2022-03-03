@@ -57,9 +57,66 @@ function CutsceneSceneInfo(_cutsceneID){
 		case "MS - open the giant door":
 			_tSceneInfo = [
 			[CutsceneOpenReceptionGiantDoor],
-			]
+			];
 		break;
 		#endregion
+		
+		//Training Room
+		case "MS - punch anne training room":
+			_tSceneInfo = [
+			[CutsceneCreateTextBox, "MS - punch anne training room"],
+			[CutsceneCheckTextBoxExists]
+			];
+		break;
+		
+		case "MS - punch anne training room 2":
+			_tSceneInfo = [
+			[CutsceneCreateTextBox, "MS - punch anne training room 2"],
+			[CutsceneCheckTextBoxExists]
+			];
+		break;
+		
+		case "MS - punch anne training room 3":
+			_tSceneInfo = [
+			[CutsceneCreateTextBox, "MS - punch anne training room 3"],
+			[CutsceneCheckTextBoxExists]
+			];
+		break;
+		
+		case "MS - punch anne training room 4":
+			_tSceneInfo = [
+			[CutsceneCreateTextBox, "MS - punch anne training room 4"],
+			[CutsceneCheckTextBoxExists]
+			];
+		break;
+		
+		case "MS - punch anne training room 5":
+			_tSceneInfo = [
+			[CutsceneCreateTextBox, "MS - punch anne training room 5"],
+			[CutsceneCheckTextBoxExists]
+			];
+		break;
+		
+		//Anne punches player after been annoyed sending them back to the medical ward
+		case "MS - punch anne training room 6":
+			_tSceneInfo = [
+			[CutsceneCreateTextBox, "MS - punch anne training room 6"],
+			[CutsceneCheckTextBoxExists]
+			];
+		break;
+		
+		//***BATTLE CUTSCENE***//
+		case "MS - summon training bot":
+			_tSceneInfo = [
+			[CutsceneMoveToBattle, [global.enemyList.trainingBot]],
+			];
+		break;
+		
+		case "MS - summon training bot 2":
+			_tSceneInfo = [
+			[CutsceneMoveToBattle, [global.enemyList.trainingBot, global.enemyList.trainingBot, global.enemyList.trainingBot]],
+			];
+		break;
 		
 		default:
 			_tSceneInfo = [

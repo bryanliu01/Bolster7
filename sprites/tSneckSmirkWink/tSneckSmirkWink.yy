@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tSneckSmirkWink","path":"sprites/tSneckSmirkWink/tSneckSmirkWink.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tSneckSmirkWink",
     "tags": [],
     "resourceType": "GMSequence",

@@ -17,6 +17,10 @@
 #macro IDLE 0
 #macro JUMP_FORWARD 1
 #macro B_ATTACK 2
+#macro SINGLE_PUNCH 8
+#macro LASER 9
+#macro ENRAGED_ATTACK 10
+#macro BOMB 11
 #macro DEFEND 3
 #macro HURT 4
 #macro DEFEND_HURT 5
@@ -44,6 +48,7 @@ turnFinished = false;
 selected = false;
 attackWillHit = false;
 incomingDamage = 0;
+damageIsCrit = false;
 
 //** HEALTH BAR **//
 healthBarWidth = 128;

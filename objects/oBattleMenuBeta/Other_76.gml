@@ -10,5 +10,13 @@ if (event_data[? "event_type"] == "sequence event") {
 			global.pauseBattle = false;
 			global.menuLayer = 0;
 			break;
+			
+		case "AllowInput":
+			allowInput = true;
+			break;
+			
+		case "PlayerIsDying":
+			hide = true;
+		break;
 	}
 }

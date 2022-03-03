@@ -9,10 +9,15 @@ function SetDefaultsForText() {
 	textBoxSprite[pageNumber] = sTextBoxStretched;
 	speakerObject[pageNumber] = noone;
 	speakerSprite[pageNumber] = noone;
+	speakerAnimate[pageNumber] = false;
 	speakerSide[pageNumber] = noone;
 	speakerVoice[pageNumber] = vDefault;
 	scripts[pageNumber] = -1;
 	scr = 0;
+	
+	//Set typewriter speed
+	textSpeed[pageNumber] = 0.8
+	
 
 }
 
@@ -217,6 +222,14 @@ function AddTextPage(_text) {
 				speakerSide[pageNumber] = 1;
 				speakerVoice[pageNumber] = vAnne;
 				break;
+				
+			case "anne incredulous 2":
+				speakerObject[pageNumber] = npcAnne;
+				speakerSprite[pageNumber] = tAnneIncredulous2;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vAnne;
+				break;
 			
 			case "anne laugh":
 				speakerObject[pageNumber] = npcAnne;
@@ -278,6 +291,23 @@ function AddTextPage(_text) {
 				speakerVoice[pageNumber] = vArk;
 				break;
 			
+			case "ark side eye":
+				speakerObject[pageNumber] = npcArk;
+				speakerSprite[pageNumber] = tArkSideEye;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vArk;
+				break;
+				
+			case "ark angry ex":
+				speakerObject[pageNumber] = npcArk;
+				speakerSprite[pageNumber] = tArkAngryEx;
+				textBoxSprite[pageNumber] = sTextBoxStretched;
+				speakerSide[pageNumber] = 1;
+				speakerVoice[pageNumber] = vArk;
+				textSpeed[pageNumber] = 0.4;
+				break;
+			
 			#endregion
 			
 			//*****NPC*****//
@@ -290,6 +320,7 @@ function AddTextPage(_text) {
 				textBoxSprite[pageNumber] = sTextBoxStretched;
 				speakerSide[pageNumber] = noone;
 				speakerVoice[pageNumber] = vDefault;
+				speakerAnimate[pageNumber] = true;
 				break;
 			#endregion
 			

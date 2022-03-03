@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSkillBar","path":"sprites/sSkillBar/sSkillBar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sSkillBar",
     "tags": [],
     "resourceType": "GMSequence",

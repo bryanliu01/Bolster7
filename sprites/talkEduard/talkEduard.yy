@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"talkEduard","path":"sprites/talkEduard/talkEduard.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "talkEduard",
     "tags": [],
     "resourceType": "GMSequence",

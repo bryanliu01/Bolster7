@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sGiantPill","path":"sprites/sGiantPill/sGiantPill.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sGiantPill",
     "tags": [],
     "resourceType": "GMSequence",

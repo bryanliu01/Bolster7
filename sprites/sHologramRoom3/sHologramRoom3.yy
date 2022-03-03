@@ -267,7 +267,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sHologramRoom3","path":"sprites/sHologramRoom3/sHologramRoom3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sHologramRoom3",
     "tags": [],
     "resourceType": "GMSequence",

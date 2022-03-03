@@ -115,7 +115,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sArkMonocle","path":"sprites/sArkMonocle/sArkMonocle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sArkMonocle",
     "tags": [],
     "resourceType": "GMSequence",

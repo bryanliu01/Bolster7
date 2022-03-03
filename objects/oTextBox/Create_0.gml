@@ -22,8 +22,7 @@ charX[0, 0] = 0;
 charY[0, 0] = 0;
 drawChar = 0;
 
-//Set typewriter speed
-textSpeed = 0.8;
+
 
 //Options for dialogue
 option[0] = "";

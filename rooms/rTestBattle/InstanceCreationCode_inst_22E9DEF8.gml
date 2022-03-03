@@ -1,0 +1,1 @@
+punchScript = "MS - summon training bot 2";

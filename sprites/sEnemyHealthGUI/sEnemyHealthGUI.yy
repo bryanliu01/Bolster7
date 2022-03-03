@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnemyHealthGUI","path":"sprites/sEnemyHealthGUI/sEnemyHealthGUI.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnemyHealthGUI",
     "tags": [],
     "resourceType": "GMSequence",

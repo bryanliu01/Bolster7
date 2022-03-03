@@ -1,5 +1,5 @@
 //event_inherited();
-if (oCombatManager.introFinished) {
+if (oCombatManager.introFinished && !hide) {
 var cx = camera_get_view_x(view_camera[0]);
 var cy = camera_get_view_y(view_camera[0]);
 var xx = (x-cx)*DISPLAY_SCALE_X;

@@ -99,7 +99,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEduardTransform","path":"sprites/sEduardTransform/sEduardTransform.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEduardTransform",
     "tags": [],
     "resourceType": "GMSequence",

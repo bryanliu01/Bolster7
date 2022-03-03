@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sIntroRoomBattle","path":"sprites/sIntroRoomBattle/sIntroRoomBattle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sIntroRoomBattle",
     "tags": [],
     "resourceType": "GMSequence",

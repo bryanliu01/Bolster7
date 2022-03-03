@@ -1,5 +1,4 @@
-#macro ROOMSTART rMSMainOffice
-
+#macro ROOMSTART rTestBattle
 //Random function for game mechanics
 randomize();
 

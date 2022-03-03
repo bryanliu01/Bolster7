@@ -1,5 +1,7 @@
 state = PlayerStateFree;
+stateAttack = Punch;
 lastState = state;
+hitByAttack = -1;
 
 // Reach a particular layer in the room and grab tile map id
 CollisionMap = layer_tilemap_get_id(layer_get_id("Col"));

@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEduard","path":"sprites/sEduard/sEduard.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEduard",
     "tags": [],
     "resourceType": "GMSequence",

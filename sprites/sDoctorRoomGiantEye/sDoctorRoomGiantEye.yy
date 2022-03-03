@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sDoctorRoomGiantEye","path":"sprites/sDoctorRoomGiantEye/sDoctorRoomGiantEye.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sDoctorRoomGiantEye",
     "tags": [],
     "resourceType": "GMSequence",

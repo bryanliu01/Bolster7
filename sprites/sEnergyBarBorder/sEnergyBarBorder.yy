@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnergyBarBorder","path":"sprites/sEnergyBarBorder/sEnergyBarBorder.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnergyBarBorder",
     "tags": [],
     "resourceType": "GMSequence",

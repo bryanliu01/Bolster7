@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayerSalute","path":"sprites/sPlayerSalute/sPlayerSalute.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPlayerSalute",
     "tags": [],
     "resourceType": "GMSequence",

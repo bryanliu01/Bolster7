@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tTinkSlightWorry","path":"sprites/tTinkSlightWorry/tTinkSlightWorry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tTinkSlightWorry",
     "tags": [],
     "resourceType": "GMSequence",

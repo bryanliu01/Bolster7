@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sRedButton","path":"sprites/sRedButton/sRedButton.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sRedButton",
     "tags": [],
     "resourceType": "GMSequence",

@@ -16,7 +16,9 @@ if (event_data[? "event_type"] == "sequence event") {
 		case "UnitHurt":
 			processFinished = true;
 		break;
-		
+		case "PlayerDied":
+			room_goto(rMainMenu);
+		break;
 	}
 	
 }

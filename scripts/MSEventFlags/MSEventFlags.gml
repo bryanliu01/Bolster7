@@ -86,3 +86,42 @@ function CutsceneOpenReceptionGiantDoor() {
 	CutsceneEndAction();
 }
 #endregion
+
+//Main Office
+//Minigame
+function FinishedMainOfficeDeskMiniGame() {
+	with oEventFlag {
+		finishedMainOfficeDeskMiniGame = true;
+	}
+}
+
+function CutsceneFinishedArkBriefsPlayer() {
+	with oEventFlag {
+		finishedArkBriefsPlayer = true;
+	}
+	CutsceneEndAction();
+}
+
+//Anne Vents Player
+function CutsceneFinishedAnneVentingPlayer() {
+	with oEventFlag {
+		finishedAnneVentingPlayer = true;
+	}
+	CutsceneEndAction();
+}
+
+//Enabled punching in training room
+function CutsceneEnabledPlayerPunching() {
+	with oEventFlag {
+		enabledPunching = true;
+	}
+	CutsceneEndAction();
+}
+
+//Anne training intro
+function CutsceneFinishedAnneTrainingIntro() {
+	with oEventFlag {
+		finishedAnneTrainingIntro = true;
+	}
+	CutsceneEndAction();
+}

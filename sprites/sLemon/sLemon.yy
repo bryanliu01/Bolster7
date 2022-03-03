@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sLemon","path":"sprites/sLemon/sLemon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sLemon",
     "tags": [],
     "resourceType": "GMSequence",

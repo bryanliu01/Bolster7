@@ -6,6 +6,7 @@ y = clamp(y, viewHeightHalf, room_height - viewHeightHalf);
 
 
 //Provide additional parameters depending on menu conditions
+
 switch (global.menuLayer) {
 	case GENERALMENU:
 		xCameraOffSet = 0;
@@ -31,11 +32,15 @@ switch (global.menuLayer) {
 				break;
 			}
 		break;
+		
+	case PROCESS:
+		xCameraOffSet = 0;
+		yCameraOffSet = 0;
+		scale = 1;
+		rate = 0.5;
+		break;
 }
 
-//Get temporary position
-var viewX = camera_get_view_x(view_camera[0]);
-var viewY = camera_get_view_y(view_camera[0]);
 
 //Get temporary views
 var viewW = camera_get_view_width(view_camera[0]);

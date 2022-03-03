@@ -5,11 +5,20 @@ for (var i = 0; i < ds_list_size(global.units); i++) {
 if (idleCount == ds_list_size(global.units) && idleCount != 0) {
 	idle = true;
 	introFinished = true;
+	oBattleMenuBeta.allowInput = true;
 }
 else {
 	idle = false;
 }
 idleCount = 0;
+
+if (global.menuLayer == PROCESS && pollOnce) {
+	global.turnCount++;
+	pollOnce = false;
+}
+else if (global.menuLayer == GENERALMENU) {
+	pollOnce = true;
+}
 
 
 //Toggle between the states of the battle
@@ -19,6 +28,23 @@ switch (combatPhase) {
 		//**BACKGROUND**//
 		instance_create_layer(0, 0, layer_get_id("Room"), oBattleBackground);
 		
+		//Create battle entities
+		if (!instance_exists(oPlayerBattle)) {
+			var unit = instance_create_layer(playerSpawnX, playerSpawnY, "Player", oPlayerBattle);
+			ds_list_add(global.units, unit);
+		}
+		
+		var size = ds_list_size(oEnemyInfo.currentEnemyList);
+		if (size == 1) enemySpawnX = 400;
+		else if (size == 2) enemySpawnX = 380;
+		else if (size == 3) enemySpawnX = 360;
+		
+		for (var i = 0; i < ds_list_size(oEnemyInfo.currentEnemyList); i++) {
+			var unit = instance_create_layer(enemySpawnX + 40 * i, enemySpawnY, "Player", oEnemyInfo.currentEnemyList[| i].obj);
+			ds_list_add(global.units, unit);
+		}
+		
+		/*
 		for (var i = 0; i < instance_number(cSpawn); i++) {
 			var spawner = instance_find(cSpawn, i);
 			
@@ -32,7 +58,7 @@ switch (combatPhase) {
 				var unit = instance_create_depth(spawner.x, spawner.y, 0, oHologramBattle);
 				ds_list_add(global.units, unit);
 			}
-		}
+		}*/
 
 		//** CAMERA **//
 		if (!instance_exists(global.battleCamera)) 
@@ -52,6 +78,7 @@ switch (combatPhase) {
 			}
 			unitsFinished = 0;
 		}
+		
 		for (var i = 0; i < ds_list_size(global.units); i++) {
 			var inst = global.units[|i];
 			if (inst.turnFinished == false) {
@@ -89,6 +116,13 @@ switch (combatPhase) {
 		}
 	break;
 	
+	case phase.process:
+		//Do Nothing
+	break;
+	
+	case phase.checkFinish:
+		
+	break;
 	/*
 	case phase.process:
 		if (processFinished) {
@@ -142,4 +176,5 @@ if (ds_list_size(global.targets) == 0) {
 
 else if (!instance_exists(oPlayerBattle)) {
 	idle = false;
+	room_goto(rMainMenu);
 }

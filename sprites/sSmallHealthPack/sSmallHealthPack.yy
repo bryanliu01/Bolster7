@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSmallHealthPack","path":"sprites/sSmallHealthPack/sSmallHealthPack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sSmallHealthPack",
     "tags": [],
     "resourceType": "GMSequence",

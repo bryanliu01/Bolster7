@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sReceptionCouch","path":"sprites/sReceptionCouch/sReceptionCouch.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sReceptionCouch",
     "tags": [],
     "resourceType": "GMSequence",

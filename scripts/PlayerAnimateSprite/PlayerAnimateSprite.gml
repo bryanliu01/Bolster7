@@ -9,12 +9,12 @@ function PlayerAnimateSprite()
 		//If animation would loop on next game step
 		if (localFrame >= _TotalFrames)
 			{
-				AnimationEnd = true;
+				animationEnd = true;
 				localFrame -= _TotalFrames;
 			}
 		else
 			{
-				AnimationEnd = false;
+				animationEnd = false;
 			}
 	}
 }

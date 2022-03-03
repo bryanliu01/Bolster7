@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tSneckSilent","path":"sprites/tSneckSilent/tSneckSilent.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tSneckSilent",
     "tags": [],
     "resourceType": "GMSequence",

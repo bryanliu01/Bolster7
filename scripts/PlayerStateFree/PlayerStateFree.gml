@@ -34,6 +34,15 @@ function PlayerStateFree()
 	//Update Image Index
 	PlayerAnimateSprite();
 	
+	//Punch key
+	if (keyOther && oEventFlag.enabledPunching) {
+		state = PlayerStatePunch;
+		stateAtack = Punch;
+		
+		//override state conditiions until punching animation finishes
+		override = true;
+	}
+	
 	if (keyActivate)
 	{
 		if (ActiveTextBox == noone)
@@ -45,6 +54,11 @@ function PlayerStateFree()
 				
 				with (_InstEnt) {
 					var _TBox = CreateTextBoxNew(textID);
+					if (oPlayer.image_index >= 0 && oPlayer.image_index < 9)
+					image_index = oPlayer.image_index + 8;
+					
+					else if (oPlayer.image_index >= 9 && oPlayer.image_index < 16)
+					image_index = oPlayer.image_index - 8;
 				}
 				ActiveTextBox = _TBox;
 			}

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sHologramDeath","path":"sprites/sHologramDeath/sHologramDeath.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sHologramDeath",
     "tags": [],
     "resourceType": "GMSequence",

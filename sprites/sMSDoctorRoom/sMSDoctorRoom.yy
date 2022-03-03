@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sMSDoctorRoom","path":"sprites/sMSDoctorRoom/sMSDoctorRoom.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sMSDoctorRoom",
     "tags": [],
     "resourceType": "GMSequence",

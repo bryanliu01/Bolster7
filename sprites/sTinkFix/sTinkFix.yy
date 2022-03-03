@@ -119,7 +119,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sTinkFix","path":"sprites/sTinkFix/sTinkFix.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sTinkFix",
     "tags": [],
     "resourceType": "GMSequence",

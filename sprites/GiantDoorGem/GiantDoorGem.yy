@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"GiantDoorGem","path":"sprites/GiantDoorGem/GiantDoorGem.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "GiantDoorGem",
     "tags": [],
     "resourceType": "GMSequence",

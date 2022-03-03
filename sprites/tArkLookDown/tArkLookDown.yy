@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tArkLookDown","path":"sprites/tArkLookDown/tArkLookDown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tArkLookDown",
     "tags": [],
     "resourceType": "GMSequence",

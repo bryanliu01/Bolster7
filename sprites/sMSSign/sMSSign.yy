@@ -187,7 +187,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sMSSign","path":"sprites/sMSSign/sMSSign.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sMSSign",
     "tags": [],
     "resourceType": "GMSequence",

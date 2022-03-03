@@ -8,12 +8,23 @@
   "volume": 1.0,
   "length": 250.0,
   "events": {
-    "Keyframes": [],
+    "Keyframes": [
+      {"id":"9f162f8e-bb66-41b3-bebf-36594cf1abd8","Key":188.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+              "EnemyAttackFinished",
+            ],"resourceVersion":"1.0","resourceType":"MessageEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MessageEventKeyframe>",},
+    ],
     "resourceVersion": "1.0",
     "resourceType": "KeyframeStore<MessageEventKeyframe>",
   },
   "moments": {
-    "Keyframes": [],
+    "Keyframes": [
+      {"id":"d3c1b978-a86a-4444-9f50-277e18307bed","Key":161.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+              "CheckForHit",
+            ],"resourceVersion":"1.0","resourceType":"MomentsEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MomentsEventKeyframe>",},
+      {"id":"3d680704-ac0b-4105-84a0-1e15a9325913","Key":176.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+              "HologramAttackA",
+            ],"resourceVersion":"1.0","resourceType":"MomentsEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MomentsEventKeyframe>",},
+    ],
     "resourceVersion": "1.0",
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
   },
@@ -129,7 +140,7 @@
     "name": "Sequences",
     "path": "folders/Sequences.yy",
   },
-  "resourceVersion": "1.3",
+  "resourceVersion": "1.4",
   "name": "seqHologramBattle",
   "tags": [],
   "resourceType": "GMSequence",

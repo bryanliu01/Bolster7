@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sCutscenePerm","path":"sprites/sCutscenePerm/sCutscenePerm.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sCutscenePerm",
     "tags": [],
     "resourceType": "GMSequence",

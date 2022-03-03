@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tAnneAngry","path":"sprites/tAnneAngry/tAnneAngry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tAnneAngry",
     "tags": [],
     "resourceType": "GMSequence",

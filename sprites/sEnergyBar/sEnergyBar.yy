@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sEnergyBar","path":"sprites/sEnergyBar/sEnergyBar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sEnergyBar",
     "tags": [],
     "resourceType": "GMSequence",

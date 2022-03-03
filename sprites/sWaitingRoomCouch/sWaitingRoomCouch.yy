@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sWaitingRoomCouch","path":"sprites/sWaitingRoomCouch/sWaitingRoomCouch.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sWaitingRoomCouch",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sMSMainOffice","path":"sprites/sMSMainOffice/sMSMainOffice.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sMSMainOffice",
     "tags": [],
     "resourceType": "GMSequence",

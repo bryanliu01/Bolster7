@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tAnneIncredulous","path":"sprites/tAnneIncredulous/tAnneIncredulous.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tAnneIncredulous",
     "tags": [],
     "resourceType": "GMSequence",

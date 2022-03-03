@@ -11,7 +11,7 @@ markerPosition += down - up;
 if (markerPosition >= optionLength) markerPosition = 0;
 if (markerPosition < 0) markerPosition = optionLength - 1;
 
-if (acceptKey && allowInput) {
+if (acceptKey && allowInput && oCombatManager.introFinished) {
 	
 	var _startingLayer = global.menuLayer;
 	switch (global.menuLayer) {
@@ -28,6 +28,7 @@ if (acceptKey && allowInput) {
 			//Skills is selected
 			//Move to skillset menu
 			case 1:
+				global.menuLayer = SKILLMENU;
 				break;
 	
 			//Items is selected
@@ -52,19 +53,121 @@ if (acceptKey && allowInput) {
 	case ATTACKMENU:
 		switch (markerPosition){
 			
-			//Write List of targets;
 			case 0:
+			
+				//Buffer targets
 				for (var i = 0; i < ds_list_size(global.targets); i++) {
 					var inst = global.targets[|i];
 					option[TARGETINGMENU, i] = inst.nameTitle;
 				}
 				
 				//Set up variables to be used in targetting
-				if (CheckEnoughCost(attackCostEnergy, attackCostSkill)) {
-					energyToDeduct = attackCostEnergy;
-					macroState = B_ATTACK;
+				if (CheckEnoughCost(option[ATTACKMENU, 0].energyCost, option[ATTACKMENU, 0].skillCost, option[ATTACKMENU, 0].healthCost)) {
+					energyToDeduct = option[ATTACKMENU, 0].energyCost;
+					skillToDeduct = option[ATTACKMENU, 0].skillCost;
+					healthToDeduct = option[ATTACKMENU, 0].healthCost;
+					
+					macroState = option[ATTACKMENU, 0].state;
+					sequenceStartPos = option[ATTACKMENU, 0].sequenceFrame;
 					sequenceName = global.attackingUnit.unitSequence;
-					sequenceStartPos = global.attackingUnit.basicAttackStart;
+					
+					global.menuLayer = TARGETINGMENU;
+				}
+				
+				break;
+				
+			case 1:
+			
+				//Buffer targets
+				for (var i = 0; i < ds_list_size(global.targets); i++) {
+					var inst = global.targets[|i];
+					option[TARGETINGMENU, i] = inst.nameTitle;
+				}
+				
+				//Set up variables to be used in targetting
+				if (CheckEnoughCost(option[ATTACKMENU, 1].energyCost, option[ATTACKMENU, 1].skillCost, option[ATTACKMENU, 1].healthCost)) {
+					energyToDeduct = option[ATTACKMENU, 1].energyCost;
+					skillToDeduct = option[ATTACKMENU, 1].skillCost;
+					healthToDeduct = option[ATTACKMENU, 1].healthCost;
+					
+					macroState = option[ATTACKMENU, 1].state;
+					sequenceStartPos = option[ATTACKMENU, 1].sequenceFrame;
+					sequenceName = global.attackingUnit.unitSequence;
+					
+					global.menuLayer = TARGETINGMENU;
+				}
+				
+				break;
+		}
+		break;
+		
+	case SKILLMENU:
+		switch (markerPosition){
+			
+			case 0:
+			
+				//Buffer targets
+				for (var i = 0; i < ds_list_size(global.targets); i++) {
+					var inst = global.targets[|i];
+					option[TARGETINGMENU, i] = inst.nameTitle;
+				}
+				
+				//Set up variables to be used in targetting
+				if (CheckEnoughCost(option[SKILLMENU, 0].energyCost, option[SKILLMENU, 0].skillCost, option[SKILLMENU, 0].healthCost)) {
+					energyToDeduct = option[SKILLMENU, 0].energyCost;
+					skillToDeduct = option[SKILLMENU, 0].skillCost;
+					healthToDeduct = option[SKILLMENU, 0].healthCost;
+					
+					macroState = option[SKILLMENU, 0].state;
+					sequenceStartPos = option[SKILLMENU, 0].sequenceFrame;
+					sequenceName = global.attackingUnit.unitSequence;
+					
+					global.menuLayer = TARGETINGMENU;
+				}
+				
+				break;
+				
+			case 1:
+			
+				//Buffer targets
+				for (var i = 0; i < ds_list_size(global.targets); i++) {
+					var inst = global.targets[|i];
+					option[TARGETINGMENU, i] = inst.nameTitle;
+				}
+				
+				//Set up variables to be used in targetting
+				if (CheckEnoughCost(option[SKILLMENU, 1].energyCost, option[SKILLMENU, 1].skillCost, option[SKILLMENU, 1].healthCost)) {
+					energyToDeduct = option[SKILLMENU, 1].energyCost;
+					skillToDeduct = option[SKILLMENU, 1].skillCost;
+					healthToDeduct = option[SKILLMENU, 1].healthCost;
+					
+					macroState = option[SKILLMENU, 1].state;
+					sequenceStartPos = option[SKILLMENU, 1].sequenceFrame;
+					sequenceName = global.attackingUnit.unitSequence;
+					
+					global.menuLayer = TARGETINGMENU;
+				}
+				
+				break;
+				
+			case 2:
+			
+				//Buffer targets
+				for (var i = 0; i < ds_list_size(global.targets); i++) {
+					var inst = global.targets[|i];
+					option[TARGETINGMENU, i] = inst.nameTitle;
+				}
+				
+				//Set up variables to be used in targetting
+				if (CheckEnoughCost(option[SKILLMENU, 2].energyCost, option[SKILLMENU, 2].skillCost, option[SKILLMENU, 2].healthCost)) {
+					energyToDeduct = option[SKILLMENU, 2].energyCost;
+					skillToDeduct = option[SKILLMENU, 2].skillCost;
+					healthToDeduct = option[SKILLMENU, 2].healthCost;
+					
+					macroState = option[SKILLMENU, 2].state;
+					sequenceStartPos = option[SKILLMENU, 2].sequenceFrame;
+					sequenceName = global.attackingUnit.unitSequence;
+					
 					global.menuLayer = TARGETINGMENU;
 				}
 				
@@ -75,9 +178,13 @@ if (acceptKey && allowInput) {
 	case TARGETINGMENU:
 	
 		switch(markerPosition) {
+			
 			case 0:
 				//global.targets[|0].drawTarget = true;
 				global.energyPoints -= energyToDeduct;
+				global.skillPoints -= skillToDeduct;
+				global.attackingUnit.current[@ HEALTH] -= healthToDeduct;
+				target = 0;
 				allowInput = false;
 				global.targeting = true;
 				
@@ -86,20 +193,45 @@ if (acceptKey && allowInput) {
 				
 				global.menuLayer = PROCESS;
 				
-				BattleCameraMove(0, -10, 0.5, 1);
+				//BattleCameraMove(0, -10, 0.5, 1);
 
 				break;
 			
 			case 1:
 				//global.targets[|1].drawTarget = true;
 				global.energyPoints -= energyToDeduct;
+				global.skillPoints -= skillToDeduct;
+				global.attackingUnit.current[@ HEALTH] -= healthToDeduct;
+				target = 1;
 				allowInput = false;
 				global.targeting = true;
-				PerformMove(1, macroState, sequenceName, sequenceStartPos);
-				global.menuLayer = PROCESS;
-				break;
-			
 				
+				//Perform the move here
+				PerformMove(target, macroState, sequenceName, sequenceStartPos);
+				
+				global.menuLayer = PROCESS;
+				
+				//BattleCameraMove(0, -10, 0.5, 1);
+
+				break;
+				
+			case 2:
+				//global.targets[|1].drawTarget = true;
+				global.energyPoints -= energyToDeduct;
+				global.skillPoints -= skillToDeduct;
+				global.attackingUnit.current[@ HEALTH] -= healthToDeduct;
+				target = 2;
+				allowInput = false;
+				global.targeting = true;
+				
+				//Perform the move here
+				PerformMove(target, macroState, sequenceName, sequenceStartPos);
+				
+				global.menuLayer = PROCESS;
+				
+				//BattleCameraMove(0, -10, 0.5, 1);
+
+				break;
 		}
 		break;
 	}
@@ -124,13 +256,16 @@ if (returnKey && allowInput) {
 		
 		//Otherwise, return to previous menu layer
 		default:
-			global.menuLayer--;
+			global.menuLayer = 0;
+			markerPosition = 0;
 			break;
 	}
 }
 
 //If on main menu layer, energy increases normally, if on any
 //other layer, pause energy increase.
-if (global.menuLayer != 0) global.pauseBattle = true;
-else global.pauseBattle = false;
+if (!oEventFlag.genocide) {
+	if (global.menuLayer != 0 || instance_exists(oTextBox)) global.pauseBattle = true;
+	else global.pauseBattle = false;
+}
 	

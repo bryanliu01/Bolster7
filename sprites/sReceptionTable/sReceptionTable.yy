@@ -247,7 +247,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sReceptionTable","path":"sprites/sReceptionTable/sReceptionTable.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sReceptionTable",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayerBattleStanceUnarmed","path":"sprites/sPlayerBattleStanceUnarmed/sPlayerBattleStanceUnarmed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPlayerBattleStanceUnarmed",
     "tags": [],
     "resourceType": "GMSequence",

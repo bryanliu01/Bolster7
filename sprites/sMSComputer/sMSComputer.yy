@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sMSComputer","path":"sprites/sMSComputer/sMSComputer.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sMSComputer",
     "tags": [],
     "resourceType": "GMSequence",

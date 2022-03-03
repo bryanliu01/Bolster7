@@ -101,7 +101,7 @@ if (textPauseTimer <= 0) {
 	
 	if (drawChar < textLength[page]) {
 		
-		drawChar += textSpeed;
+		drawChar += textSpeed[page];
 		drawChar = clamp(drawChar, 0, textLength[page]);
 		var checkChar = string_char_at(text[page], drawChar);
 		
@@ -131,10 +131,14 @@ else {
 if (drawChar == textLength[page]) {
 	
 	//If textbox is not typing, npc will remain still
-	if (instance_exists(speakerObject[page])) {
+	if (speakerAnimate[page]) {
 		speakerObject[page].image_index = 0;
 		speakerObject[page].image_speed = 0;
 	}
+	/*if ((speakerObject[page]) == npcSneck) {
+		speakerObject[page].image_index = 0;
+		speakerObject[page].image_speed = 0;
+	}*/
 	
 	//Flip through pages
 	if (acceptKey) {
@@ -161,7 +165,8 @@ else {
 	
 	
 	//If typing is not done, npc in overworld will animate talking
-	if (instance_exists(speakerObject[page])) speakerObject[page].image_speed = 1;
+	if (instance_exists(speakerObject[page]) && speakerAnimate[page]) 
+		speakerObject[page].image_speed = 1;
 	
 	
 	//drawChar condition is here because upon textbox activation, first page will

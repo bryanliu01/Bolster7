@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBattleMenuTest","path":"sprites/sBattleMenuTest/sBattleMenuTest.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBattleMenuTest",
     "tags": [],
     "resourceType": "GMSequence",

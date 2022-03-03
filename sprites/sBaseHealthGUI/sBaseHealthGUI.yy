@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBaseHealthGUI","path":"sprites/sBaseHealthGUI/sBaseHealthGUI.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBaseHealthGUI",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tArkNeutral","path":"sprites/tArkNeutral/tArkNeutral.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tArkNeutral",
     "tags": [],
     "resourceType": "GMSequence",

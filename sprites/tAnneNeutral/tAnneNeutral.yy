@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tAnneNeutral","path":"sprites/tAnneNeutral/tAnneNeutral.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tAnneNeutral",
     "tags": [],
     "resourceType": "GMSequence",

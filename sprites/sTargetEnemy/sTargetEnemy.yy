@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sTargetEnemy","path":"sprites/sTargetEnemy/sTargetEnemy.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sTargetEnemy",
     "tags": [],
     "resourceType": "GMSequence",

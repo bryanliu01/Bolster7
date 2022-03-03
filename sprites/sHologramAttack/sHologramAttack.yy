@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sHologramAttack","path":"sprites/sHologramAttack/sHologramAttack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sHologramAttack",
     "tags": [],
     "resourceType": "GMSequence",

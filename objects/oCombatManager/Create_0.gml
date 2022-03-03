@@ -12,6 +12,12 @@ idle = false;
 idleCount = 0;
 introFinished = false;
 
+playerSpawnX = 176;
+playerSpawnY = 144;
+
+enemySpawnX = 400;
+enemySpawnY = 144;
+
 enum phase {
 	init,
 	realTimeTurn,
@@ -22,6 +28,9 @@ enum phase {
 	win,
 	lose
 }
+
+global.turnCount = 0;
+pollOnce = true;
 
 combatPhase = phase.init;
 unitsFinished = 0;

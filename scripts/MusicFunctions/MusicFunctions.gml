@@ -17,6 +17,26 @@ function StopMusic(boolOverride) {
 	}
 }
 
+function PauseMusic(boolOverride) {
+	if (instance_exists(oMusicManager)) {
+		with (oMusicManager) {
+			override = boolOverride;
+			audio_pause_sound(bgm);
+		}
+	}
+}
+
+function ResumeMusic(boolOverride) {
+	if (instance_exists(oMusicManager)) {
+		with (oMusicManager) {
+			override = boolOverride;
+			audio_resume_sound(bgm);
+		}
+	}
+}
+
+
+
 //Toggles override of music
 function OverrideMusic(boolOverride) {
 	if (instance_exists(oMusicManager)) {

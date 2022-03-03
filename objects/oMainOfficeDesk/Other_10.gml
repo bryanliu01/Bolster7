@@ -4,11 +4,15 @@ for (var i = 0; i < array_length(colourArray); i++) {
 }
 	
 //Set up tSceneInfo to be executed by cutscene object.
-for (var i = 0; i < 4 * array_length(colourArray); i = i + 4) {
-	tSceneInfo[i] = [CutsceneDisplayDeskColour, i/4];
-	tSceneInfo[i + 1] = [CutsceneWait, baseTime - roundNumber * timeReduction];
-	tSceneInfo[i + 2] = [CutsceneDisplayDeskColour, -1];
+for (var i = 0; i < 5 * array_length(colourArray); i = i + 5) {
+	tSceneInfo[i]	  = [CutsceneWait, baseTime - roundNumber * timeReduction];
+	tSceneInfo[i + 1] = [CutsceneDisplayDeskColour, i/5];
+	tSceneInfo[i + 2] = [CutscenePlayDeskSound];
 	tSceneInfo[i + 3] = [CutsceneWait, baseTime - roundNumber * timeReduction];
+	tSceneInfo[i + 4] = [CutsceneDisplayDeskColour, -1];	
 }
 
+while (array_length(tSceneInfo) > 5 * array_length(colourArray)) {
+	array_pop(tSceneInfo);
+}
 

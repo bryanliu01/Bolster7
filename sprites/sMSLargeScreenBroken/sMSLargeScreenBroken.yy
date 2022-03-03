@@ -191,7 +191,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sMSLargeScreenBroken","path":"sprites/sMSLargeScreenBroken/sMSLargeScreenBroken.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sMSLargeScreenBroken",
     "tags": [],
     "resourceType": "GMSequence",

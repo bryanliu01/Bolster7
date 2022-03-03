@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sDoctorRoomVeins","path":"sprites/sDoctorRoomVeins/sDoctorRoomVeins.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sDoctorRoomVeins",
     "tags": [],
     "resourceType": "GMSequence",

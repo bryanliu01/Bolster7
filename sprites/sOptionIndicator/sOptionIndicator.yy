@@ -111,7 +111,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sOptionIndicator","path":"sprites/sOptionIndicator/sOptionIndicator.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sOptionIndicator",
     "tags": [],
     "resourceType": "GMSequence",

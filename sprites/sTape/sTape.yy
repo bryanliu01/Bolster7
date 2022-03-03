@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sTape","path":"sprites/sTape/sTape.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sTape",
     "tags": [],
     "resourceType": "GMSequence",

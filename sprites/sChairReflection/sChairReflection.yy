@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sChairReflection","path":"sprites/sChairReflection/sChairReflection.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sChairReflection",
     "tags": [],
     "resourceType": "GMSequence",

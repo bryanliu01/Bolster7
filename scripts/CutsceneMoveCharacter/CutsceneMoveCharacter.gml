@@ -5,7 +5,7 @@
 ///@arg spd
 ///@arg d for the direction the sprite is facing
 
-function CutsceneMoveCharacter(obj, xPos, yPos, relative, spd, d) {
+function CutsceneMoveObject(obj, xPos, yPos, relative, spd) {
 	
 	
 	if (xDest == -1) {
@@ -27,23 +27,6 @@ function CutsceneMoveCharacter(obj, xPos, yPos, relative, spd, d) {
 		
 		if (point_distance(x, y, xx, yy) >= spd) {
 			
-			sprite_index = spriteRun;
-			
-			var _CardinalDirection = d;
-			var _TotalFrames = sprite_get_number(sprite_index) / 4;
-			image_index = localFrame + (_CardinalDirection * _TotalFrames);
-			localFrame += sprite_get_speed(sprite_index) / FRAME_RATE;
-	
-			//If animation would loop on next game step
-			if (localFrame >= _TotalFrames)
-				{
-					AnimationEnd = true;
-					localFrame -= _TotalFrames;
-				}
-			else
-				{
-					AnimationEnd = false;
-				}
 			
 			var dir = point_direction(x, y, xx, yy);
 			var ldirx = lengthdir_x(spd, dir);
@@ -55,7 +38,6 @@ function CutsceneMoveCharacter(obj, xPos, yPos, relative, spd, d) {
 		}
 		else {
 			
-			sprite_index = spriteIdle;
 			x = xx;
 			y = yy;
 			

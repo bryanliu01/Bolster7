@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBattleBackground","path":"sprites/sBattleBackground/sBattleBackground.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBattleBackground",
     "tags": [],
     "resourceType": "GMSequence",

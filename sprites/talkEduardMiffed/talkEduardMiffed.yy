@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"talkEduardMiffed","path":"sprites/talkEduardMiffed/talkEduardMiffed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "talkEduardMiffed",
     "tags": [],
     "resourceType": "GMSequence",

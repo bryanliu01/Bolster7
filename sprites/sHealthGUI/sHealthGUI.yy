@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sHealthGUI","path":"sprites/sHealthGUI/sHealthGUI.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sHealthGUI",
     "tags": [],
     "resourceType": "GMSequence",

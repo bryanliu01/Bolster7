@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sTextBoxStretched","path":"sprites/sTextBoxStretched/sTextBoxStretched.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sTextBoxStretched",
     "tags": [],
     "resourceType": "GMSequence",

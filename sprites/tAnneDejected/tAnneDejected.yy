@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tAnneDejected","path":"sprites/tAnneDejected/tAnneDejected.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tAnneDejected",
     "tags": [],
     "resourceType": "GMSequence",

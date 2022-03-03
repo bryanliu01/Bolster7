@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sDoctorRoomTable","path":"sprites/sDoctorRoomTable/sDoctorRoomTable.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sDoctorRoomTable",
     "tags": [],
     "resourceType": "GMSequence",

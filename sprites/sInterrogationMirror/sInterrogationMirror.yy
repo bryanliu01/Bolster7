@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sInterrogationMirror","path":"sprites/sInterrogationMirror/sInterrogationMirror.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sInterrogationMirror",
     "tags": [],
     "resourceType": "GMSequence",

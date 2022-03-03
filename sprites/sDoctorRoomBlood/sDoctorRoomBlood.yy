@@ -2119,7 +2119,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sDoctorRoomBlood","path":"sprites/sDoctorRoomBlood/sDoctorRoomBlood.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sDoctorRoomBlood",
     "tags": [],
     "resourceType": "GMSequence",

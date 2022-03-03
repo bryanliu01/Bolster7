@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPixelBlack","path":"sprites/sPixelBlack/sPixelBlack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPixelBlack",
     "tags": [],
     "resourceType": "GMSequence",

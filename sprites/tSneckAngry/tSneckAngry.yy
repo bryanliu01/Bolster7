@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tSneckAngry","path":"sprites/tSneckAngry/tSneckAngry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tSneckAngry",
     "tags": [],
     "resourceType": "GMSequence",

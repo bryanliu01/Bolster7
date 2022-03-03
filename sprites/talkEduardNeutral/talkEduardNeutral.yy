@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"talkEduardNeutral","path":"sprites/talkEduardNeutral/talkEduardNeutral.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "talkEduardNeutral",
     "tags": [],
     "resourceType": "GMSequence",

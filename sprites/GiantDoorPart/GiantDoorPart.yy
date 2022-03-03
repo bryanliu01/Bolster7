@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"GiantDoorPart","path":"sprites/GiantDoorPart/GiantDoorPart.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "GiantDoorPart",
     "tags": [],
     "resourceType": "GMSequence",

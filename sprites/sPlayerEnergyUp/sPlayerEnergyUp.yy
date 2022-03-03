@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayerEnergyUp","path":"sprites/sPlayerEnergyUp/sPlayerEnergyUp.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPlayerEnergyUp",
     "tags": [],
     "resourceType": "GMSequence",

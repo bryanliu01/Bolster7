@@ -7,11 +7,11 @@ function WalkSprite(dir) {
 	localFrame += sprite_get_speed(sprite_index) / FRAME_RATE;
 	if (localFrame >= _TotalFrames)
 		{
-			AnimationEnd = true;
+			animationEnd = true;
 			localFrame -= _TotalFrames;
 		}
 	else
 		{
-			AnimationEnd = false;
+			animationEnd = false;
 		}
 }

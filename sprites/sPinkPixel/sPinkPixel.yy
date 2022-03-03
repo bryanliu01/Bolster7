@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPinkPixel","path":"sprites/sPinkPixel/sPinkPixel.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPinkPixel",
     "tags": [],
     "resourceType": "GMSequence",

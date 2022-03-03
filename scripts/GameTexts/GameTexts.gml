@@ -152,7 +152,7 @@ switch(textID) {
 	break;
 	
 	case "MS - doctor fixing 3":
-		AddTextPage("Well look here, the location of interest where Sneck was supposed to head off to.", "tink slight worry r");
+		AddTextPage("Well would you look at that. Sneck's rendevous location.", "tink slight worry r");
 		AddTextPage("WHAT!?", "anne shock");
 		AddTextPage("THAT TREACHEROUS SNAKE. FIVE HOURS I SPENT CODDLING HIM", "anne angry");
 		AddTextPage("How did a rookie do it in fifteen minutes? *sniff* There's no justice.", "anne sad");
@@ -321,6 +321,9 @@ switch(textID) {
 	
 	//Main Office
 	#region
+	
+	//ACTIVATE MINIGAME
+	#region
 	case "MS - activate the desk?":
 		AddTextPage("Activate the desk?");
 			AddOption("Yes.", "MS - desk activated");
@@ -330,8 +333,209 @@ switch(textID) {
 			with oMainOfficeDesk initialiseGame = true;
 			with (oTextBox) instance_destroy();
 		break;
+		
+	case "MS - reset the desk?":
+		AddTextPage("Reset the desk?");
+			AddOption("Yes.", "MS - desk resetted");
+			AddOption("No.", "null");
+	break;
+		case "MS - desk resetted":
+			with oMainOfficeDesk MainOfficeDeskDefault();
+			with (oTextBox) instance_destroy();
+		break;
+	
+	case "MS - desk game completed":
+		AddTextPage("It won't turn back on again.");
+	break;
 	#endregion
 	
+	//Press buttons for minigame
+	#region
+	//ORANGE
+	case "MS - press the orange button":
+		AddTextPage("Press the orange button?");
+			AddOption("Yes.", "MS - yes press orange");
+			AddOption("No", "null");
+	break;
+		case "MS - yes press orange":
+			with oMainOfficeDesk PressOrange();
+			with (oTextBox) instance_destroy();
+		break;
+	
+	//RED
+	case "MS - press the red button":
+		AddTextPage("Press the red button?");
+			AddOption("Yes.", "MS - yes press red");
+			AddOption("No", "null");
+	break;
+		case "MS - yes press red":
+			with oMainOfficeDesk PressRed();
+			with (oTextBox) instance_destroy();
+		break;
+	
+	//GREEN
+	case "MS - press the green button":
+		AddTextPage("Press the green button?");
+			AddOption("Yes.", "MS - yes press green");
+			AddOption("No", "null");
+	break;
+		case "MS - yes press green":
+			with oMainOfficeDesk PressGreen();
+			with (oTextBox) instance_destroy();
+		break;
+	
+	//BLUE
+	case "MS - press the blue button":
+		AddTextPage("Press the blue button?");
+			AddOption("Yes.", "MS - yes press blue");
+			AddOption("No", "null");
+	break;
+		case "MS - yes press blue":
+			with oMainOfficeDesk PressBlue();
+			with (oTextBox) instance_destroy();
+		break;
+	#endregion
+	
+	//Ark briefs player
+	#region
+	case "MS - ark briefs player":
+		AddTextPage("It is beautiful is it not?", "ark neutral");
+		AddTextPage("That planet over there is where Sneck was supposed to go to retrieve a package. Deep inside The Forbidden", "ark neutral");
+		AddTextPage("We can still see the package from here, it is located deep in the snow lands.", "ark neutral");
+		AddTextPage("This is beyond the scope of where you can legally travel.", "ark neutral");
+		//Both sprites were facing upwards, now they face each other.
+		SetScript([FixFrame, npcArkCutscene, 0, 9, 180]);
+		SetScript([FixFrame, oPlayerCutscene, 0, 1, 0]);
+		AddTextPage("Normally, that is.", "ark look down");
+		AddTextPage("I will give you special permission to cross The Forbidden seeing as you successfully interrogated Sneck.", "ark look down");
+		AddTextPage("Is this paper all that he gave you?", "ark neutral");
+		AddTextPage("Amnesia? We will see about that.", "ark look down");
+		AddTextPage("I will have one of the guard bots do the interrogating from now on. It will drain him.", "ark neutral");
+		AddTextPage("Remember, treat all entities as hostile.", "ark neutral");
+		AddTextPage("Seeing you have only been here for two weeks, I can not say that I fully trust your combative skills.", "ark look down");
+		AddTextPage("One moment.", "ark neutral");
+		SetScript([InstanceChange, npcArkCutscene, npcArkPaging, true]);
+		AddTextPage("Send Anne up to the main office.", "ark side eye");
+	break;
+	
+	case "MS - ark briefs player 2":
+		AddTextPage("Reporting for duty, Sir!", "anne neutral2");
+		SetScript([FixFrame, npcArkCutscene, 0, 13, 270]);
+		AddTextPage("You will train this fledgling in combat.", "ark look down");
+		AddTextPage("What? No way.", "anne incredulous");
+		SetScript([PauseMusic, true]);
+		AddTextPage("Excuse me?", "ark angry ex");
+		AddTextPage("I mean, yes sir boss man.", "anne neutral");
+		SetScript([ResumeMusic, true]);
+		AddTextPage("Then it is settled. There is a spare training room to the west of here. Do not disappoint again.", "ark look down");
+		AddTextPage("Anne, signing out.", "anne neutral");
+	break;
+	
+	case "MS - anne silent treatment":
+		AddTextPage("...", "anne sulk");
+	break;
+	
+	case "MS - maintenance work":
+		AddTextPage("I wonder what is inside that package.", "ark neutral");
+		AddTextPage("Make sure you bring that package back, officer. Do not disappoint.", "ark look down");
+		SetScript([ChangeTextID, npcArk, "MS - go and get trained"]);
+	break;
+	
+	case "MS - go and get trained":
+		AddTextPage("You can find the training room to the west of this floor.", "ark neutral");
+		SetScript([ChangeTextID, npcArk, "MS - maintenance work"]);
+	break;
+	
+	case "MS - go and get trained 2":
+		AddTextPage("Still moping around? How you managed to pull off the interrogation so quickly, I will never know.", "ark look down");
+		AddTextPage("Go find Anne in the training room in the west wing.", "ark side eye");
+	break;
+	
+	#endregion
+	
+	#endregion
+	
+	//Reception Hallway 2
+	#region
+	case "MS - anne vents player":
+		AddTextPage("Alright rook what's your goal here huh?", "anne sulk");
+		AddTextPage("Suddenly pop outta no where and think you're a big shot? Weed out the ranks and upstage your senoir officer huh?", "anne angry");
+		AddTextPage("Whatever stunt you pulled back there was a fluke. An utter fluke!", "anne angry");
+		AddTextPage("I should've failed you the moment you showed up on that entrance exam if I was supposed to recieve this embarassment.", "anne angry");
+		AddTextPage("*sigh* Let's get you trained up.", "anne dejected");
+		AddTextPage("Meet me at the training room to the west of here.", "anne neutral2");
+	break;
+	#endregion
+	
+	//Training Room
+	#region
+	case "MS - anne trains player":
+		AddTextPage("Welcome to the training room, rook.", "anne neutral");
+		AddTextPage("A wide spacious room built upon the thickest and hardest aluminium spacekind has to offer.", "anne neutral");
+		AddTextPage("What's that? You asking if I'm fighting you?", "anne neutral");
+		AddTextPage("Ha ha ha ha ha ha ha!", "anne laugh");
+		AddTextPage("Please.", "anne incredulous");
+		AddTextPage("As much as I want to turn your butt over your head, I can't get in trouble with Ark again.", "anne dejected");
+		AddTextPage("You can deal with these metal bots instead. They are produced at a dozen to a dime.", "anne neutral");
+	break;
+	
+	case "MS - anne trains player 2":
+		AddTextPage("You can initiate fights by punching anything thats considered hostile.", "anne neutral");
+		AddTextPage("Try it out on this dummy.", "anne neutral");
+		SetScript([AddBasicMove, global.moveSet.punch, oItemManager.basicMoveList]);
+		SetScript([AddBasicMove, global.moveSet.doublePunch, oItemManager.basicMoveList]);
+		
+	break;
+	
+	case "MS - anne trains player 3":
+		AddTextPage("Go ahead rook, give the bot a jab.", "anne neutral");
+	break;
+	
+	case "MS - punch anne training room":
+		AddTextPage("Oh dear. You missed the bot. Try punching the other way this time.", "anne neutral");
+		SetScript([ChangePunchScript, npcAnne, "MS - punch anne training room 2"]);
+	break;
+	
+	case "MS - punch anne training room 2":
+		AddTextPage("...", "anne incredulous");
+		AddTextPage("Whatever you are trying to do, it's not working.", "anne neutral");
+		SetScript([ChangePunchScript, npcAnne, "MS - punch anne training room 3"]);
+	break;
+	
+	case "MS - punch anne training room 3":
+		AddTextPage("Take off those sunglasses. You might actually be able to see where you are punching.", "anne neutral2");
+		SetScript([ChangePunchScript, npcAnne, "MS - punch anne training room 4"]);
+	break;
+	
+	case "MS - punch anne training room 4":
+		AddTextPage("Wait.", "anne neutral2");
+		AddTextPage("Are you calling me a bot?", "anne angry");
+		SetScript([ChangePunchScript, npcAnne, "MS - punch anne training room 5"]);
+	break;
+	
+	case "MS - punch anne training room 5":
+		AddTextPage("Alright. I'm giving you that hit.", "anne angry");
+		AddTextPage("It was cute the first two times. Now it's annoying.", "anne angry");
+		SetScript([ChangePunchScript, npcAnne, "MS - punch anne training room 6"]);
+	break;
+	
+	case "MS - punch anne training room 6":
+		AddTextPage("...", "anne angry");
+		AddTextPage("What's another infraction to my record?", "anne incredulous 2");
+		//Punch player sending them back to the medical ward.
+	break;
+	
+	case "MS - anne trains player 4":
+		AddTextPage("Hey get back in there you aren't supposed to run away!", "anne angry");
+		AddTextPage("Not too shabby. Remember, you can initiate fights with hostiles by punching them.", "anne neutral");
+		AddTextPage("Although sometimes, they really don't like that idea so they might randomly ambush you in hostile areas.", "anne neutral2");
+	break;
+	
+	case "MS - anne stops player from leaving":
+		AddTextPage("Where do you think you're going?", "anne angry");
+		AddTextPage("Punch the damn bot!", "anne angry");
+	break;
+	#endregion
 	//ENTITIES
 	
 	//Chest in rMSTreasureRoom

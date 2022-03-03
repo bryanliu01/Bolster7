@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tSneckRealisation","path":"sprites/tSneckRealisation/tSneckRealisation.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tSneckRealisation",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSNeck","path":"sprites/sSNeck/sSNeck.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sSNeck",
     "tags": [],
     "resourceType": "GMSequence",

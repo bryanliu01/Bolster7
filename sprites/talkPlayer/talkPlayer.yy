@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"talkPlayer","path":"sprites/talkPlayer/talkPlayer.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "talkPlayer",
     "tags": [],
     "resourceType": "GMSequence",

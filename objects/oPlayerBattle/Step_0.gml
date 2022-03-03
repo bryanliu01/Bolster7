@@ -1,7 +1,7 @@
 event_inherited();
 
 //Start energy generation after intro has been completed
-if (oCombatManager.idle) {
+if (oCombatManager.idle && allowInput) {
 
 
 //**ENERGY BAR**//

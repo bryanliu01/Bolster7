@@ -7,5 +7,9 @@
 //Make sure the textID string matches EXACTLY the switch case
 textID = "";
 image_speed = 0;
+direction = 0;
 
 localFrame = 0;
+
+//Load this variable with a cutscene, triggers when object is punched
+punchScript = -1;

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tTinkSurprised","path":"sprites/tTinkSurprised/tTinkSurprised.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tTinkSurprised",
     "tags": [],
     "resourceType": "GMSequence",

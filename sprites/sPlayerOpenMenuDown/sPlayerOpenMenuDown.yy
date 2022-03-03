@@ -127,7 +127,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPlayerOpenMenuDown","path":"sprites/sPlayerOpenMenuDown/sPlayerOpenMenuDown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sPlayerOpenMenuDown",
     "tags": [],
     "resourceType": "GMSequence",

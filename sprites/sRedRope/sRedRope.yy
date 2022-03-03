@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sRedRope","path":"sprites/sRedRope/sRedRope.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sRedRope",
     "tags": [],
     "resourceType": "GMSequence",

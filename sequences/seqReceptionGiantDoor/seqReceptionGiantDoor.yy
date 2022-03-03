@@ -187,7 +187,7 @@
     "name": "MSReceptionHallway",
     "path": "folders/Sequences/MSReceptionHallway.yy",
   },
-  "resourceVersion": "1.3",
+  "resourceVersion": "1.4",
   "name": "seqReceptionGiantDoor",
   "tags": [],
   "resourceType": "GMSequence",

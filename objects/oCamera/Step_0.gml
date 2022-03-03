@@ -1,3 +1,6 @@
+if (room == rBattleRoom) {
+	instance_destroy();
+}
 if (instance_exists(Follow))
 {
 	XTo = Follow.x;

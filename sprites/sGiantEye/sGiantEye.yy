@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sGiantEye","path":"sprites/sGiantEye/sGiantEye.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sGiantEye",
     "tags": [],
     "resourceType": "GMSequence",

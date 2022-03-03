@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sAnneSitting","path":"sprites/sAnneSitting/sAnneSitting.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sAnneSitting",
     "tags": [],
     "resourceType": "GMSequence",

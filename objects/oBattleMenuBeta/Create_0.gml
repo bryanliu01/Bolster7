@@ -1,6 +1,7 @@
 #macro PROCESS 10
 #macro GENERALMENU 0
 #macro ATTACKMENU 1
+#macro SKILLMENU 3
 #macro TARGETINGMENU 2
 
 test = 0;
@@ -22,32 +23,26 @@ markerPosition = 0;
 baseUI = layer_get_id("BaseUI");
 
 
-allowInput = true;
+allowInput = false;
 
 optionLength = 0;
 
 global.menuLayer = 0;
 
+hide = false;
+
 
 energyToDeduct = 0;
+skillToDeduct = 0;
+healthToDeduct = 0;
 target = 0;
 sequenceName = noone;
 macroState = noone;
 sequenceStartPos = 0
 performScript = 0;
 
-//**ATTACK COSTS**//
-attackCostEnergy = 1;
-attackCostSkill = 0;
 
-//**STRUCTS**//
-doublePunch = {
-	name : "Double Punch",
-	energyCost : 1,
-	skillCost : 0,
-	healthCost : 0,
-	info : "Strike the enemy with two forceful hits."
-};
+
 //Menu Layer: -1
 //Process 
 option[PROCESS,0] = "No one";
@@ -62,7 +57,29 @@ option[GENERALMENU,4] = "Retreat";
 
 //Menu layer: 1
 //Attack Menu
-option[ATTACKMENU,0] = doublePunch.name;
+count = 0;
+
+//Added basic moves to ATTACKMENU
+for (var i = 0; i < ds_list_size(oItemManager.basicMoveList); i++) {
+	
+	//Check if in the basic move list, the move is actually basic
+	if (oItemManager.basicMoveList[| i].category == BASIC) {
+		option[ATTACKMENU, count] = oItemManager.basicMoveList[| i];
+		count++;
+	}
+}
+
+count = 0;
+//Added skill moves to SKILLMENU
+for (var i = 0; i < ds_list_size(oItemManager.skillMoveList); i++) {
+	
+	//Check if in the basic move list, the move is actually basic
+	if (oItemManager.skillMoveList[| i].category == SKILLS) {
+		option[SKILLMENU, count] = oItemManager.skillMoveList[| i];
+		count++;
+	}
+}
+
 
 //Menu layer: 2
 //Targeting Attack Menu

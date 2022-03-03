@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sTableReflection","path":"sprites/sTableReflection/sTableReflection.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sTableReflection",
     "tags": [],
     "resourceType": "GMSequence",

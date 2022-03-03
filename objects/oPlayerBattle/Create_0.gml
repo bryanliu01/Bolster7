@@ -1,9 +1,10 @@
 event_inherited();
 
+
 base[HEALTH] = 100;
-base[SKILLPOINTS] = 20;
+base[SKILLPOINTS] = 50;
 base[SPEED] = 50;
-base[ATTACKPOINTS] = 5
+base[ATTACKPOINTS] = 5;
 base[DEFENCEPOINTS] = 3;
 base[ACCURACY] = 1;
 
@@ -43,13 +44,29 @@ deathStart = 132;
 deathEnd = 199;
 
 battleArriveStart = 200;
-battleArriveEnd = 254;
+battleArriveEnd = 255;
+
+singlePunchStart = 256;
+singlePunchEnd = 267;
+
+laserShotStart = 268;
+laserShotEnd = 326;
+
+enragedAttackStart = 327;
+enragedAttackEnd = 371;
+
+bombRainStart = 372;
+bombRainEnd = 410;
 
 //Initial Animation, Player arrives to battle
 layer_sequence_headpos(unitSequence, battleArriveStart);
 
 baseUI = layer_get_id("BaseUI");
 
+allowInput = true;
+alpha = 1;
+
+hide = false;
 
 //**HEALTH BAR**//
 //Create Health Bar

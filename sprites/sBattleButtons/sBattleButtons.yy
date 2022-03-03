@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBattleButtons","path":"sprites/sBattleButtons/sBattleButtons.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sBattleButtons",
     "tags": [],
     "resourceType": "GMSequence",
