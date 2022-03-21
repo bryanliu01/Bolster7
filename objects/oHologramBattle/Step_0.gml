@@ -1,9 +1,10 @@
 event_inherited();
 
-if (energy < maxEnergy && !pause && oBattleMenuBeta.allowInput && state != DEATH && global.menuLayer == 0) {
+
+if (energy < maxEnergy && oCombatManager.idle && ((!pause && oBattleMenuBeta.allowInput && state != DEATH && global.menuLayer == 0) || (oPlayerBattle.unitIsDefending && oPlayerBattle.state == DEFEND))) {
 	energy += 1;
 }
-else if (energy >= maxEnergy && state != DEATH && global.menuLayer == 0) {
+else if (energy >= maxEnergy && state != DEATH && (global.menuLayer == 0 || oPlayerBattle.unitIsDefending)) {
 	
 	//Stop player input and pause energy gain
 	//Turn pauseBattle to false in enemy sequence when attack goes through

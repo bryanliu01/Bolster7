@@ -6,7 +6,7 @@ if (oCombatManager.idle && allowInput) {
 
 //**ENERGY BAR**//
 //If a energy block is less than the partition width, let energy bar increase
-if (currentEnergy < partitionWidth && !global.energyFull && !global.pauseBattle) {
+if (currentEnergy < partitionWidth && !global.energyFull && !global.pauseBattle && !unitIsDefending) {
 	currentEnergy = currentEnergy + (1 / 4) * (oPlayerBattle.current[SPEED]/50);
 }
 
