@@ -1,4 +1,7 @@
 draw_set_font(fGUILarge);
+if (defended) {
+	draw_set_font(fGUI);
+}
 draw_set_halign(vk_left);
 draw_set_valign(vk_up);
 if (!crit) draw_set_colour(c_white);

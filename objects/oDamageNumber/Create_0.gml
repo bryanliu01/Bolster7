@@ -1,5 +1,6 @@
 damage = 0;
 crit = false;
+defended = false;
 dir = choose(-1, 1);
 amp = random_range(0.1,1);
 yInt = 60;
