@@ -4,7 +4,8 @@ acceptKey = keyboard_check_pressed(ord("Z"));
 returnKey = keyboard_check_pressed(ord("X"));
 
 //Store number of options in current menu
-optionLength = array_length(option[global.menuLayer]);
+if (global.menuLayer != TARGETINGMENU) optionLength = array_length(option[global.menuLayer]);
+else optionLength = ds_list_size(global.targets);
 
 markerPosition += down - up;
 
@@ -18,6 +19,11 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 		
 	//General Actions
 	case GENERALMENU:	
+		with (oPlayerBattle) unitIsDefending = false;
+		for (var i = 0; i < ds_list_size(global.targets); i++) {
+				var inst = global.targets[| i];
+				option[TARGETINGMENU, i] = inst.nameTitle;
+		}
 		switch (markerPosition){
 			//Attack is selected
 			//Move to Attack menu
@@ -31,13 +37,28 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 				global.menuLayer = SKILLMENU;
 				break;
 	
-			//Items is selected
-			//Move to item menu
-			case 2:
-				break;
-		
+			
 			//Defend is selected
 			//Immediately end the turn
+			case 2:
+				target = noone;
+				allowInput = false;
+				global.targeting = true;
+				
+				oPlayerBattle.unitIsDefending = true;
+				
+				//Player defends and reduces the enemy's next attack
+				macroState = DEFEND;
+				sequenceName = global.attackingUnit.unitSequence;
+				sequenceStartPos = oPlayerBattle.defendStart;
+				PerformMove(target, macroState, sequenceName, sequenceStartPos);
+				
+				global.menuLayer = PROCESS;
+				break;
+		
+			
+			//Items is selected
+			//Move to item menu
 			case 3:
 				break;
 			
@@ -51,15 +72,10 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 		
 	//Attack Menu
 	case ATTACKMENU:
+	
 		switch (markerPosition){
 			
 			case 0:
-			
-				//Buffer targets
-				for (var i = 0; i < ds_list_size(global.targets); i++) {
-					var inst = global.targets[|i];
-					option[TARGETINGMENU, i] = inst.nameTitle;
-				}
 				
 				//Set up variables to be used in targetting
 				if (CheckEnoughCost(option[ATTACKMENU, 0].energyCost, option[ATTACKMENU, 0].skillCost, option[ATTACKMENU, 0].healthCost)) {
@@ -78,11 +94,6 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 				
 			case 1:
 			
-				//Buffer targets
-				for (var i = 0; i < ds_list_size(global.targets); i++) {
-					var inst = global.targets[|i];
-					option[TARGETINGMENU, i] = inst.nameTitle;
-				}
 				
 				//Set up variables to be used in targetting
 				if (CheckEnoughCost(option[ATTACKMENU, 1].energyCost, option[ATTACKMENU, 1].skillCost, option[ATTACKMENU, 1].healthCost)) {
@@ -102,16 +113,12 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 		break;
 		
 	case SKILLMENU:
+	
+		
 		switch (markerPosition){
 			
 			case 0:
 			
-				//Buffer targets
-				for (var i = 0; i < ds_list_size(global.targets); i++) {
-					var inst = global.targets[|i];
-					option[TARGETINGMENU, i] = inst.nameTitle;
-				}
-				
 				//Set up variables to be used in targetting
 				if (CheckEnoughCost(option[SKILLMENU, 0].energyCost, option[SKILLMENU, 0].skillCost, option[SKILLMENU, 0].healthCost)) {
 					energyToDeduct = option[SKILLMENU, 0].energyCost;
@@ -129,11 +136,6 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 				
 			case 1:
 			
-				//Buffer targets
-				for (var i = 0; i < ds_list_size(global.targets); i++) {
-					var inst = global.targets[|i];
-					option[TARGETINGMENU, i] = inst.nameTitle;
-				}
 				
 				//Set up variables to be used in targetting
 				if (CheckEnoughCost(option[SKILLMENU, 1].energyCost, option[SKILLMENU, 1].skillCost, option[SKILLMENU, 1].healthCost)) {
@@ -153,10 +155,7 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 			case 2:
 			
 				//Buffer targets
-				for (var i = 0; i < ds_list_size(global.targets); i++) {
-					var inst = global.targets[|i];
-					option[TARGETINGMENU, i] = inst.nameTitle;
-				}
+				
 				
 				//Set up variables to be used in targetting
 				if (CheckEnoughCost(option[SKILLMENU, 2].energyCost, option[SKILLMENU, 2].skillCost, option[SKILLMENU, 2].healthCost)) {
@@ -176,8 +175,9 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 		break;
 	//Targeting Attack Layer
 	case TARGETINGMENU:
-	
+		
 		switch(markerPosition) {
+			
 			
 			case 0:
 				//global.targets[|0].drawTarget = true;
@@ -232,6 +232,25 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 				//BattleCameraMove(0, -10, 0.5, 1);
 
 				break;
+				
+			case 3:
+				//global.targets[|1].drawTarget = true;
+				global.energyPoints -= energyToDeduct;
+				global.skillPoints -= skillToDeduct;
+				global.attackingUnit.current[@ HEALTH] -= healthToDeduct;
+				target = 2;
+				allowInput = false;
+				global.targeting = true;
+				
+				//Perform the move here
+				PerformMove(target, macroState, sequenceName, sequenceStartPos);
+				
+				global.menuLayer = PROCESS;
+				
+				//BattleCameraMove(0, -10, 0.5, 1);
+
+				break;
+				
 		}
 		break;
 	}
@@ -247,7 +266,7 @@ if (acceptKey && allowInput && oCombatManager.introFinished) {
 
 
 
-if (returnKey && allowInput) {
+if (returnKey && allowInput & !oPlayerBattle.unitIsDefending) {
 	switch (global.menuLayer) {
 		
 		//If we are at base menu layer, do nothing
@@ -268,4 +287,5 @@ if (!oEventFlag.genocide) {
 	if (global.menuLayer != 0 || instance_exists(oTextBox)) global.pauseBattle = true;
 	else global.pauseBattle = false;
 }
+
 	

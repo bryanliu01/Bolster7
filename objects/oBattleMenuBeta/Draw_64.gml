@@ -16,6 +16,7 @@ for (var i = 0; i < optionLength; i++) {
 height = 3 * string_height("a") + 2 * wordBorder + 41;
 width = string_width("TRAINING BOT") + 2 * wordBorder;
 
+
 //Draw menu background
 //sprite_index = sBattleMenuTest;
 draw_sprite_ext(sBattleMenuTest, 0, x, y, width/sprite_get_width(sBattleMenuTest), height/sprite_get_height(sBattleMenuTest), 0, c_white, 1);
@@ -33,10 +34,10 @@ for (var i = 0; i < optionLength; i++) {
 		draw_text_colour(x + width/2, y + wordBorder + wordSpace * i, option[global.menuLayer, i], _c, _c, _c, _c, 1);
 	
 	else if  (global.menuLayer == TARGETINGMENU) {
-		for (var i = 0; i < ds_list_size(global.targets); i++) {
+		for (var j = 0; j < ds_list_size(global.targets); j++) {
 			var _c = c_white
-			if (markerPosition == i) _c = c_lime;
-			draw_text_colour(x + width/2, y + wordBorder + wordSpace * i, option[global.menuLayer, i], _c, _c, _c, _c, 1);
+			if (markerPosition == j) _c = c_lime;
+			draw_text_colour(x + width/2, y + wordBorder + wordSpace * j, option[global.menuLayer, j], _c, _c, _c, _c, 1);
 		}
 	}
 	//Otherwise since we have constructor objects, draw the attack names by other code convnetion
@@ -49,51 +50,32 @@ for (var i = 0; i < optionLength; i++) {
 if (global.menuLayer != GENERALMENU) {
 	draw_sprite_stretched(sBattleMenuTest, 0, x + width, y, RESOLUTIONW - width, height);
 	switch (global.menuLayer) {
-		
+			
 		//Attack Menu
 		case ATTACKMENU:
-			switch (markerPosition){
-				//Basic Attack, default starting move is double punch
-				case 0:
-					DisplayInfo(option[ATTACKMENU, 0].energyCost,
-								option[ATTACKMENU, 0].skillCost,
-								option[ATTACKMENU, 0].healthCost,
-								option[ATTACKMENU, 0].info);
-				break;
-				
-				case 1:
-					DisplayInfo(option[ATTACKMENU, 1].energyCost,
-								option[ATTACKMENU, 1].skillCost,
-								option[ATTACKMENU, 1].healthCost,
-								option[ATTACKMENU, 1].info);
-				break;
-			}
+			DisplayInfo(option[ATTACKMENU, markerPosition].energyCost,
+						option[ATTACKMENU, markerPosition].skillCost,
+						option[ATTACKMENU, markerPosition].healthCost,
+						option[ATTACKMENU, markerPosition].info);
+			break;
 			
 		break;
 		
 		case SKILLMENU:
-			switch (markerPosition){
-				//Basic Attack, default starting move is double punch
-				case 0:
-					DisplayInfo(option[SKILLMENU, 0].energyCost,
-								option[SKILLMENU, 0].skillCost,
-								option[SKILLMENU, 0].healthCost,
-								option[SKILLMENU, 0].info);
-				break;
-				
-				case 1:	
-					DisplayInfo(option[SKILLMENU, 1].energyCost,
-								option[SKILLMENU, 1].skillCost,
-								option[SKILLMENU, 1].healthCost,
-								option[SKILLMENU, 1].info);
-				break;
-				
-			}
+			DisplayInfo(option[SKILLMENU, markerPosition].energyCost,
+						option[SKILLMENU, markerPosition].skillCost,
+						option[SKILLMENU, markerPosition].healthCost,
+						option[SKILLMENU, markerPosition].info);
+			break;
 			
-		break;
 	}
 }
+else if (global.menuLayer == GENERALMENU) {
+	draw_sprite_stretched(sBattleMenuTest, 0, x + width, y, RESOLUTIONW - width, height);
+	DisplayFlavourText();
 }
+}
+
 
 /*
 if (oPlayerBattle.state == IDLE)

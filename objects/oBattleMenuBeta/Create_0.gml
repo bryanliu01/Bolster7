@@ -86,5 +86,3 @@ for (var i = 0; i < ds_list_size(oItemManager.skillMoveList); i++) {
 //Update this array in the step event with a list of 
 //available targets
 option[TARGETINGMENU,0] = "No one";
-
-

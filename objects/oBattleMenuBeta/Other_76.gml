@@ -9,6 +9,14 @@ if (event_data[? "event_type"] == "sequence event") {
 			allowInput = true;
 			global.pauseBattle = false;
 			global.menuLayer = 0;
+			oPlayerBattle.unitIsDefending = false;
+			break;
+			
+		case "EnemyAttackFinished":
+			allowInput = true;
+			global.pauseBattle = false;
+			global.menuLayer = 0;
+			oPlayerBattle.unitIsDefending = false;
 			break;
 			
 		case "AllowInput":
