@@ -42,6 +42,14 @@ function CreateTextBoxNew(_text_id) {
 	}
 }
 
+function CreateCombatTextBox(_text_id) {
+	var textBox = instance_create_layer(-150,-150,"Text", oCombatTextBox);
+	
+	with textBox {
+		CombatTexts(_text_id);
+	}
+}
+
 //Input an array as its parameter with the script as the first element
 //Input parameters of that script as subsequent elements
 function SetScript(scrArray) {
