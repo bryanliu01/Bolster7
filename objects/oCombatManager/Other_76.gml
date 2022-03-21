@@ -11,6 +11,12 @@ if (event_data[? "event_type"] == "sequence event") {
 			}
 		break;
 		
+		case "EnemyAttackFinished":
+			oBattleMenuBeta.allowInput = true;
+			global.attackingUnit = oPlayerBattle;
+			global.menuLayer = 0;
+			break;
+		
 		case "UnitDeath":
 		break;
 		case "UnitHurt":

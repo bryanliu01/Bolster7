@@ -1,6 +1,7 @@
 //Check if all units are idle, if so, display GUI
 for (var i = 0; i < ds_list_size(global.units); i++) {
-	if (global.units[|i].state == IDLE) idleCount++;
+	if (global.units[|i].state == IDLE || global.units[|i].state == DEFEND) idleCount++;
+	
 }
 if (idleCount == ds_list_size(global.units) && idleCount != 0) {
 	idle = true;
@@ -38,6 +39,7 @@ switch (combatPhase) {
 		if (size == 1) enemySpawnX = 400;
 		else if (size == 2) enemySpawnX = 380;
 		else if (size == 3) enemySpawnX = 360;
+		else if (size == 3) enemySpawnX = 340;
 		
 		for (var i = 0; i < ds_list_size(oEnemyInfo.currentEnemyList); i++) {
 			var unit = instance_create_layer(enemySpawnX + 40 * i, enemySpawnY, "Player", oEnemyInfo.currentEnemyList[| i].obj);
@@ -169,12 +171,7 @@ switch (combatPhase) {
 	*/
 }
 
-//WIN
-if (ds_list_size(global.targets) == 0) {
-	idle = false;
-}
-
-else if (!instance_exists(oPlayerBattle)) {
+if (!instance_exists(oPlayerBattle)) {
 	idle = false;
 	room_goto(rMainMenu);
 }
