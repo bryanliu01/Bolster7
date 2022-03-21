@@ -107,14 +107,16 @@ function CutsceneSceneInfo(_cutsceneID){
 		
 		//***BATTLE CUTSCENE***//
 		case "MS - summon training bot":
+			var enemySet = GetEnemySet("1 hologram");
 			_tSceneInfo = [
-			[CutsceneMoveToBattle, [global.enemyList.trainingBot]],
+			[CutsceneMoveToBattle, enemySet],
 			];
 		break;
 		
 		case "MS - summon training bot 2":
+			var enemySet = GetEnemySet("4 hologram");
 			_tSceneInfo = [
-			[CutsceneMoveToBattle, [global.enemyList.trainingBot, global.enemyList.trainingBot, global.enemyList.trainingBot]],
+			[CutsceneMoveToBattle, enemySet],
 			];
 		break;
 		
