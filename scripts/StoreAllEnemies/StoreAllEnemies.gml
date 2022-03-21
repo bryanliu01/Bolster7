@@ -13,3 +13,24 @@ function StoreAllEnemies(){
 		)
 	}
 }
+
+
+//This function stores the database of all possible enemy combinations to be used when encountering.
+//This also sets up flavour text in battle by using global.enemyID as set ID.
+function GetEnemySet(setName) {
+	global.enemyID = setName;
+	var list = noone;
+	switch (setName) {
+		case "1 hologram":
+			list = [global.enemyList.trainingBot];
+		break;
+		
+		case "4 hologram":
+			list = [global.enemyList.trainingBot,
+					global.enemyList.trainingBot,
+					global.enemyList.trainingBot,
+					global.enemyList.trainingBot];
+		break;
+	}
+	return list;
+}

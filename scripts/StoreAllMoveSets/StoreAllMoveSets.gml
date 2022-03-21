@@ -44,8 +44,8 @@ function StoreAllMoveSets(){
 		enragedAttack : new CreateMove (
 			"Enraged ATK",
 			2,
-			5,
-			15,
+			0,
+			20,
 			"Sacrifice some health to become enraged for this attack alone. The attack has a higher chance to critically strike depending on your how low your health is.",
 			SKILLS,
 			327, //371
