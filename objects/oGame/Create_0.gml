@@ -16,7 +16,7 @@ global.music = noone;
 //global.iCamera = instance_create_layer(0, 0, layer, oCamera);
 
 
-surface_resize(application_surface, RESOLUTIONW, RESOLUTIONH);
+surface_resize(application_surface, 640, 360);
 
 //Use this to test out new rooms, keep in mind it will
 //bug out oRoomExit, so comment this out when playing normally

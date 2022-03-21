@@ -1,7 +1,7 @@
 event_inherited();
 
 
-base[HEALTH] = 60;
+base[HEALTH] = 25;
 
 //The lower the speed the faster the enemy will attack
 base[SPEED] = 50;
