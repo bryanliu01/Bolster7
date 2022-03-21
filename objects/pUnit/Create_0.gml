@@ -50,6 +50,8 @@ attackWillHit = false;
 incomingDamage = 0;
 damageIsCrit = false;
 
+unitIsDefending = false;
+
 //** HEALTH BAR **//
 healthBarWidth = 128;
 healthBarHeight = sprite_get_height(sHealthBar);
@@ -64,7 +66,12 @@ function DamageUnit(amount) {
 		current[HEALTH] = current[@ HEALTH];
 	
 	} else {
-		current[@ HEALTH] -= damage;
+		if (unitIsDefending) {
+			
+			current[@ HEALTH] -= round(damage * 0.5);
+		}
+		else current[@ HEALTH] -= damage;
+			
 	}
 	//More neat code down below
 	//current[@ HEALTH] -= max(0, damage);

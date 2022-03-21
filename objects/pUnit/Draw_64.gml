@@ -11,5 +11,3 @@ var _hp = current[@ HEALTH]/base[@ HEALTH];
 draw_sprite_stretched(sHealthBar, 0, xx-20, yy-30, _hp*healthBarWidth, healthBarHeight);
 draw_sprite(sHealthBarBorder, 0,xx-20,yy-30);
 */
-
-if (drawTarget = true) draw_sprite(sTargetEnemy, 0, x, y);

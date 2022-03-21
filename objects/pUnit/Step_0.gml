@@ -81,6 +81,7 @@ switch(state) {
 	
 	//Defend
 	case DEFEND:
+		
 		if (layer_sequence_get_headpos(unitSequence) > defendEnd) {
 			layer_sequence_headpos(unitSequence, defendStart);
 		}
@@ -99,8 +100,7 @@ switch(state) {
 			
 			else if (current[@ HEALTH] <= 0) {
 				layer_sequence_headpos(unitSequence, deathStart);
-				ds_list_delete(global.units, ds_list_find_index(global.units, id));
-				ds_list_delete(global.targets, ds_list_find_index(global.targets, id));
+				
 				state = DEATH;
 				
 			}
@@ -118,6 +118,8 @@ switch(state) {
 	
 	case DEATH:
 		if (layer_sequence_get_headpos(unitSequence) > deathEnd) {
+			ds_list_delete(global.units, ds_list_find_index(global.units, id));
+			ds_list_delete(global.targets, ds_list_find_index(global.targets, id));
 			instance_destroy();
 		}
 	break;
