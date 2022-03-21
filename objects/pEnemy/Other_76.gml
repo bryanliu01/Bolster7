@@ -7,8 +7,6 @@ if (event_data[? "event_type"] == "sequence event") {
 		//Enables the GUI to be used after animation end
 		case "EnemyAttackFinished":
 			pause = false;
-			oBattleMenuBeta.allowInput = true;
-			global.attackingUnit = oPlayerBattle;
 			break;
 	}
 }

@@ -25,7 +25,7 @@ if (!setup) {
 		
 		//Find how many characters are on each page
 		textLength[i] = string_length(text[i]);
-		
+
 		//Check if character on the left
 		textXOffset[i] = 135;
 		portraitXOffset[i] = 25;
@@ -41,6 +41,7 @@ if (!setup) {
 		if (speakerSide[i] == noone) {
 			textXOffset[i] = 80;
 		}
+		
 		
 		//Setting individual characters to find where the line breaks at word limit
 		for (var c = 0; c < textLength[i]; c++) {
@@ -127,6 +128,7 @@ if (textPauseTimer <= 0) {
 else {
 	textPauseTimer--;
 }
+
 //If typing is done, go to next page
 if (drawChar == textLength[page]) {
 	
@@ -139,7 +141,7 @@ if (drawChar == textLength[page]) {
 		speakerObject[page].image_index = 0;
 		speakerObject[page].image_speed = 0;
 	}*/
-	
+
 	//Flip through pages
 	if (acceptKey) {
 		event_perform(ev_other, ev_user0);
@@ -157,6 +159,7 @@ if (drawChar == textLength[page]) {
 			}
 			instance_destroy();
 		}
+		
 	}
 }
 	
@@ -178,9 +181,12 @@ else {
 
 
 	
-//Draw the textbox
+
 var textX = textBoxX + textXOffset[page];
 var textY = textBoxY;
+
+
+
 
 textBoxImage += textBoxSpeed;
 textBoxSpriteWidth = sprite_get_width(textBoxSprite[page]);
@@ -203,8 +209,10 @@ if (speakerSprite[page] != noone) {
 	DrawCosmetics(speakerX);
 }
 
+
 //Draw textbox if its animated, else this works for static boxes too
 draw_sprite_ext(textBoxSprite[page], textBoxImage, textX, textY , textBoxWidth/textBoxSpriteWidth, textBoxHeight/textBoxSpriteHeight, 0, c_white, 1);
+
 
 //Options
 if (drawChar == textLength[page] && page == pageNumber - 1) {
