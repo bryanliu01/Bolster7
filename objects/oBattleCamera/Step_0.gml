@@ -23,14 +23,10 @@ switch (global.menuLayer) {
 		break;
 		
 	case TARGETINGMENU:
-		switch (oBattleMenuBeta.markerPosition) {
-			case 0:
-				xCameraOffSet = -110;
-				yCameraOffSet = -10;
-				scale = 0.5;
-				rate = 0.15;
-				break;
-			}
+		xCameraOffSet = -110;
+		yCameraOffSet = -10;
+		scale = 0.5;
+		rate = 0.15;
 		break;
 		
 	case PROCESS:
