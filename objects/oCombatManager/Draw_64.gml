@@ -25,8 +25,3 @@ for (var i = 0; i < ds_list_size(global.targets); i++) {
 	
 }
 }
-
-/*
-for (var i = 0; i < ds_list_size(global.targets); i++) {
-	draw_text(100,100 + i * 10,global.targets[|i].id);
-}
